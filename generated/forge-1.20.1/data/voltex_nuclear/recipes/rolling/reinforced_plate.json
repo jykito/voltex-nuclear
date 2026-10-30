@@ -1,0 +1,15 @@
+{
+  "__comment": "Reinforced plate (stage 11.5): the boron alloy rolled.",
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:rolling",
+  "ingredient": {
+    "item": "voltex_nuclear:boron_alloy"
+  },
+  "inputCount": 1,
+  "result": {
+    "item": "voltex_nuclear:reinforced_plate",
+    "count": 1
+  },
+  "processingTime": 140,
+  "energyCost": 200
+}

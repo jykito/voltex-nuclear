@@ -1,0 +1,30 @@
+{
+  "__comment": "Replaces the Voltex recipe of the same id while the add-on is installed: the cascade opens Voltex epoch 4 and needs its ports by then, the Voltex recipe sits at epoch 7. Without the add-on Voltex keeps its own recipe; the block is the same.",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "industrial_core:emerald_flux_cable"
+    },
+    "B": {
+      "item": "industrial_core:lithium_battery"
+    },
+    "C": {
+      "tag": "c:plates/invar"
+    },
+    "D": {
+      "item": "industrial_core:machine_casing"
+    },
+    "E": {
+      "item": "industrial_core:logic_board"
+    }
+  },
+  "result": {
+    "id": "industrial_core:multiblock_energy_port",
+    "count": 1
+  }
+}

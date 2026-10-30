@@ -1,0 +1,83 @@
+{
+  "__comment": "Stellar suit (DESIGN step 12): the third power suit, the whole set, as Nexite and Plasma in the Voltex tab.",
+  "parent": "voltex_nuclear:nuclear/man_made_star",
+  "display": {
+    "icon": {
+      "id": "voltex_nuclear:stellar_chestplate"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.stellar_suit.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.stellar_suit.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_stellar_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:stellar_helmet"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stellar_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:stellar_chestplate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stellar_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:stellar_leggings"
+            ]
+          }
+        ]
+      }
+    },
+    "has_stellar_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:stellar_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stellar_helmet"
+    ],
+    [
+      "has_stellar_chestplate"
+    ],
+    [
+      "has_stellar_leggings"
+    ],
+    [
+      "has_stellar_boots"
+    ]
+  ]
+}

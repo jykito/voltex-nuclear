@@ -1,0 +1,11 @@
+{
+  "__comment": "Cryo cell (DESIGN step 22, variant C): the water cell (the Voltex condensator) with four cryolite, as the Voltex cryo rod is an empty rod with four cryolite. Era 5, next to the fuel rod assemblies.",
+  "type": "industrial_core:rod_fabrication_recipe",
+  "result": { "id": "voltex_nuclear:cryo_cell", "count": 1 },
+  "ingredient1": { "item": "industrial_core:condensator" },
+  "ingredient2": { "item": "industrial_core:cryolite" },
+  "count1": 1,
+  "count2": 4,
+  "processingTime": 200,
+  "energyCostPerTick": 400
+}

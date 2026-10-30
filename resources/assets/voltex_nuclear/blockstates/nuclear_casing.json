@@ -1,0 +1,1405 @@
+{
+  "variants": {
+    "role=none": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=south,lit=false,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth"
+    },
+    "facing=south,lit=false,role=column": {
+      "model": "voltex_nuclear:block/cascade/column"
+    },
+    "facing=south,lit=false,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector"
+    },
+    "facing=south,lit=false,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low"
+    },
+    "facing=south,lit=false,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_off"
+    },
+    "facing=south,lit=true,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth"
+    },
+    "facing=south,lit=true,role=column": {
+      "model": "voltex_nuclear:block/cascade/column"
+    },
+    "facing=south,lit=true,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector"
+    },
+    "facing=south,lit=true,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low"
+    },
+    "facing=south,lit=true,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_on"
+    },
+    "facing=west,lit=false,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 90
+    },
+    "facing=west,lit=false,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 90
+    },
+    "facing=west,lit=false,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 90
+    },
+    "facing=west,lit=false,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 90
+    },
+    "facing=west,lit=false,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_off",
+      "y": 90
+    },
+    "facing=west,lit=true,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 90
+    },
+    "facing=west,lit=true,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 90
+    },
+    "facing=west,lit=true,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 90
+    },
+    "facing=west,lit=true,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 90
+    },
+    "facing=west,lit=true,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_on",
+      "y": 90
+    },
+    "facing=north,lit=false,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 180
+    },
+    "facing=north,lit=false,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 180
+    },
+    "facing=north,lit=false,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 180
+    },
+    "facing=north,lit=false,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 180
+    },
+    "facing=north,lit=false,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_off",
+      "y": 180
+    },
+    "facing=north,lit=true,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 180
+    },
+    "facing=north,lit=true,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 180
+    },
+    "facing=north,lit=true,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 180
+    },
+    "facing=north,lit=true,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 180
+    },
+    "facing=north,lit=true,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_on",
+      "y": 180
+    },
+    "facing=east,lit=false,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 270
+    },
+    "facing=east,lit=false,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 270
+    },
+    "facing=east,lit=false,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 270
+    },
+    "facing=east,lit=false,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 270
+    },
+    "facing=east,lit=false,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_off",
+      "y": 270
+    },
+    "facing=east,lit=true,role=plinth": {
+      "model": "voltex_nuclear:block/cascade/plinth",
+      "y": 270
+    },
+    "facing=east,lit=true,role=column": {
+      "model": "voltex_nuclear:block/cascade/column",
+      "y": 270
+    },
+    "facing=east,lit=true,role=collector": {
+      "model": "voltex_nuclear:block/cascade/collector",
+      "y": 270
+    },
+    "facing=east,lit=true,role=cabinet_low": {
+      "model": "voltex_nuclear:block/cascade/cab_low",
+      "y": 270
+    },
+    "facing=east,lit=true,role=cabinet_mid": {
+      "model": "voltex_nuclear:block/cascade/cab_mid_on",
+      "y": 270
+    },
+    "facing=south,piece=0,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_0"
+    },
+    "facing=south,piece=2,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_2"
+    },
+    "facing=south,piece=3,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_3"
+    },
+    "facing=south,piece=4,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_4"
+    },
+    "facing=south,piece=5,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_5"
+    },
+    "facing=south,piece=6,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_6"
+    },
+    "facing=south,piece=7,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_7"
+    },
+    "facing=south,lit=false,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_off"
+    },
+    "facing=south,lit=true,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_on"
+    },
+    "facing=south,piece=9,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_9"
+    },
+    "facing=south,piece=11,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_11"
+    },
+    "facing=south,piece=12,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_12"
+    },
+    "facing=south,piece=13,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_13"
+    },
+    "facing=south,piece=14,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_14"
+    },
+    "facing=south,piece=15,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_15"
+    },
+    "facing=south,piece=16,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_16"
+    },
+    "facing=south,lit=false,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_off"
+    },
+    "facing=south,lit=true,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_on"
+    },
+    "facing=south,piece=18,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_18"
+    },
+    "facing=south,piece=20,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_20"
+    },
+    "facing=south,piece=21,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_21"
+    },
+    "facing=south,piece=22,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_22"
+    },
+    "facing=south,piece=23,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_23"
+    },
+    "facing=south,piece=24,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_24"
+    },
+    "facing=south,piece=25,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_25"
+    },
+    "facing=south,lit=false,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_off"
+    },
+    "facing=south,lit=true,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_on"
+    },
+    "facing=south,piece=27,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_27"
+    },
+    "facing=south,piece=28,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_28"
+    },
+    "facing=south,piece=29,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_29"
+    },
+    "facing=south,piece=30,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_30"
+    },
+    "facing=south,piece=31,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_31"
+    },
+    "facing=south,piece=32,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_32"
+    },
+    "facing=south,piece=33,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_33"
+    },
+    "facing=south,piece=34,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_34"
+    },
+    "facing=south,piece=35,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_35"
+    },
+    "facing=south,piece=36,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_36"
+    },
+    "facing=south,piece=37,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_37"
+    },
+    "facing=south,piece=38,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_38"
+    },
+    "facing=south,piece=39,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_39"
+    },
+    "facing=south,piece=40,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_40"
+    },
+    "facing=south,piece=41,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_41"
+    },
+    "facing=south,piece=42,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_42"
+    },
+    "facing=south,piece=43,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_43"
+    },
+    "facing=south,piece=44,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_44"
+    },
+    "facing=west,piece=0,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_0",
+      "y": 90
+    },
+    "facing=west,piece=2,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_2",
+      "y": 90
+    },
+    "facing=west,piece=3,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_3",
+      "y": 90
+    },
+    "facing=west,piece=4,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_4",
+      "y": 90
+    },
+    "facing=west,piece=5,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_5",
+      "y": 90
+    },
+    "facing=west,piece=6,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_6",
+      "y": 90
+    },
+    "facing=west,piece=7,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_7",
+      "y": 90
+    },
+    "facing=west,lit=false,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_off",
+      "y": 90
+    },
+    "facing=west,lit=true,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_on",
+      "y": 90
+    },
+    "facing=west,piece=9,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_9",
+      "y": 90
+    },
+    "facing=west,piece=11,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_11",
+      "y": 90
+    },
+    "facing=west,piece=12,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_12",
+      "y": 90
+    },
+    "facing=west,piece=13,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_13",
+      "y": 90
+    },
+    "facing=west,piece=14,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_14",
+      "y": 90
+    },
+    "facing=west,piece=15,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_15",
+      "y": 90
+    },
+    "facing=west,piece=16,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_16",
+      "y": 90
+    },
+    "facing=west,lit=false,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_off",
+      "y": 90
+    },
+    "facing=west,lit=true,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_on",
+      "y": 90
+    },
+    "facing=west,piece=18,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_18",
+      "y": 90
+    },
+    "facing=west,piece=20,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_20",
+      "y": 90
+    },
+    "facing=west,piece=21,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_21",
+      "y": 90
+    },
+    "facing=west,piece=22,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_22",
+      "y": 90
+    },
+    "facing=west,piece=23,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_23",
+      "y": 90
+    },
+    "facing=west,piece=24,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_24",
+      "y": 90
+    },
+    "facing=west,piece=25,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_25",
+      "y": 90
+    },
+    "facing=west,lit=false,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_off",
+      "y": 90
+    },
+    "facing=west,lit=true,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_on",
+      "y": 90
+    },
+    "facing=west,piece=27,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_27",
+      "y": 90
+    },
+    "facing=west,piece=28,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_28",
+      "y": 90
+    },
+    "facing=west,piece=29,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_29",
+      "y": 90
+    },
+    "facing=west,piece=30,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_30",
+      "y": 90
+    },
+    "facing=west,piece=31,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_31",
+      "y": 90
+    },
+    "facing=west,piece=32,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_32",
+      "y": 90
+    },
+    "facing=west,piece=33,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_33",
+      "y": 90
+    },
+    "facing=west,piece=34,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_34",
+      "y": 90
+    },
+    "facing=west,piece=35,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_35",
+      "y": 90
+    },
+    "facing=west,piece=36,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_36",
+      "y": 90
+    },
+    "facing=west,piece=37,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_37",
+      "y": 90
+    },
+    "facing=west,piece=38,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_38",
+      "y": 90
+    },
+    "facing=west,piece=39,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_39",
+      "y": 90
+    },
+    "facing=west,piece=40,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_40",
+      "y": 90
+    },
+    "facing=west,piece=41,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_41",
+      "y": 90
+    },
+    "facing=west,piece=42,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_42",
+      "y": 90
+    },
+    "facing=west,piece=43,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_43",
+      "y": 90
+    },
+    "facing=west,piece=44,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_44",
+      "y": 90
+    },
+    "facing=north,piece=0,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_0",
+      "y": 180
+    },
+    "facing=north,piece=2,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_2",
+      "y": 180
+    },
+    "facing=north,piece=3,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_3",
+      "y": 180
+    },
+    "facing=north,piece=4,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_4",
+      "y": 180
+    },
+    "facing=north,piece=5,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_5",
+      "y": 180
+    },
+    "facing=north,piece=6,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_6",
+      "y": 180
+    },
+    "facing=north,piece=7,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_7",
+      "y": 180
+    },
+    "facing=north,lit=false,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_off",
+      "y": 180
+    },
+    "facing=north,lit=true,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_on",
+      "y": 180
+    },
+    "facing=north,piece=9,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_9",
+      "y": 180
+    },
+    "facing=north,piece=11,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_11",
+      "y": 180
+    },
+    "facing=north,piece=12,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_12",
+      "y": 180
+    },
+    "facing=north,piece=13,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_13",
+      "y": 180
+    },
+    "facing=north,piece=14,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_14",
+      "y": 180
+    },
+    "facing=north,piece=15,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_15",
+      "y": 180
+    },
+    "facing=north,piece=16,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_16",
+      "y": 180
+    },
+    "facing=north,lit=false,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_off",
+      "y": 180
+    },
+    "facing=north,lit=true,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_on",
+      "y": 180
+    },
+    "facing=north,piece=18,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_18",
+      "y": 180
+    },
+    "facing=north,piece=20,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_20",
+      "y": 180
+    },
+    "facing=north,piece=21,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_21",
+      "y": 180
+    },
+    "facing=north,piece=22,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_22",
+      "y": 180
+    },
+    "facing=north,piece=23,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_23",
+      "y": 180
+    },
+    "facing=north,piece=24,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_24",
+      "y": 180
+    },
+    "facing=north,piece=25,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_25",
+      "y": 180
+    },
+    "facing=north,lit=false,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_off",
+      "y": 180
+    },
+    "facing=north,lit=true,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_on",
+      "y": 180
+    },
+    "facing=north,piece=27,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_27",
+      "y": 180
+    },
+    "facing=north,piece=28,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_28",
+      "y": 180
+    },
+    "facing=north,piece=29,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_29",
+      "y": 180
+    },
+    "facing=north,piece=30,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_30",
+      "y": 180
+    },
+    "facing=north,piece=31,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_31",
+      "y": 180
+    },
+    "facing=north,piece=32,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_32",
+      "y": 180
+    },
+    "facing=north,piece=33,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_33",
+      "y": 180
+    },
+    "facing=north,piece=34,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_34",
+      "y": 180
+    },
+    "facing=north,piece=35,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_35",
+      "y": 180
+    },
+    "facing=north,piece=36,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_36",
+      "y": 180
+    },
+    "facing=north,piece=37,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_37",
+      "y": 180
+    },
+    "facing=north,piece=38,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_38",
+      "y": 180
+    },
+    "facing=north,piece=39,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_39",
+      "y": 180
+    },
+    "facing=north,piece=40,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_40",
+      "y": 180
+    },
+    "facing=north,piece=41,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_41",
+      "y": 180
+    },
+    "facing=north,piece=42,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_42",
+      "y": 180
+    },
+    "facing=north,piece=43,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_43",
+      "y": 180
+    },
+    "facing=north,piece=44,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_44",
+      "y": 180
+    },
+    "facing=east,piece=0,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_0",
+      "y": 270
+    },
+    "facing=east,piece=2,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_2",
+      "y": 270
+    },
+    "facing=east,piece=3,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_3",
+      "y": 270
+    },
+    "facing=east,piece=4,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_4",
+      "y": 270
+    },
+    "facing=east,piece=5,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_5",
+      "y": 270
+    },
+    "facing=east,piece=6,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_6",
+      "y": 270
+    },
+    "facing=east,piece=7,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_7",
+      "y": 270
+    },
+    "facing=east,lit=false,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_off",
+      "y": 270
+    },
+    "facing=east,lit=true,piece=8,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_8_on",
+      "y": 270
+    },
+    "facing=east,piece=9,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_9",
+      "y": 270
+    },
+    "facing=east,piece=11,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_11",
+      "y": 270
+    },
+    "facing=east,piece=12,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_12",
+      "y": 270
+    },
+    "facing=east,piece=13,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_13",
+      "y": 270
+    },
+    "facing=east,piece=14,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_14",
+      "y": 270
+    },
+    "facing=east,piece=15,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_15",
+      "y": 270
+    },
+    "facing=east,piece=16,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_16",
+      "y": 270
+    },
+    "facing=east,lit=false,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_off",
+      "y": 270
+    },
+    "facing=east,lit=true,piece=17,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_17_on",
+      "y": 270
+    },
+    "facing=east,piece=18,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_18",
+      "y": 270
+    },
+    "facing=east,piece=20,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_20",
+      "y": 270
+    },
+    "facing=east,piece=21,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_21",
+      "y": 270
+    },
+    "facing=east,piece=22,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_22",
+      "y": 270
+    },
+    "facing=east,piece=23,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_23",
+      "y": 270
+    },
+    "facing=east,piece=24,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_24",
+      "y": 270
+    },
+    "facing=east,piece=25,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_25",
+      "y": 270
+    },
+    "facing=east,lit=false,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_off",
+      "y": 270
+    },
+    "facing=east,lit=true,piece=26,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_26_on",
+      "y": 270
+    },
+    "facing=east,piece=27,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_27",
+      "y": 270
+    },
+    "facing=east,piece=28,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_28",
+      "y": 270
+    },
+    "facing=east,piece=29,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_29",
+      "y": 270
+    },
+    "facing=east,piece=30,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_30",
+      "y": 270
+    },
+    "facing=east,piece=31,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_31",
+      "y": 270
+    },
+    "facing=east,piece=32,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_32",
+      "y": 270
+    },
+    "facing=east,piece=33,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_33",
+      "y": 270
+    },
+    "facing=east,piece=34,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_34",
+      "y": 270
+    },
+    "facing=east,piece=35,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_35",
+      "y": 270
+    },
+    "facing=east,piece=36,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_36",
+      "y": 270
+    },
+    "facing=east,piece=37,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_37",
+      "y": 270
+    },
+    "facing=east,piece=38,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_38",
+      "y": 270
+    },
+    "facing=east,piece=39,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_39",
+      "y": 270
+    },
+    "facing=east,piece=40,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_40",
+      "y": 270
+    },
+    "facing=east,piece=41,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_41",
+      "y": 270
+    },
+    "facing=east,piece=42,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_42",
+      "y": 270
+    },
+    "facing=east,piece=43,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_43",
+      "y": 270
+    },
+    "facing=east,piece=44,role=plant": {
+      "model": "voltex_nuclear:block/radiochem/cell_44",
+      "y": 270
+    },
+    "facing=south,piece=1,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=south,piece=10,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=south,piece=19,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=west,piece=1,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=west,piece=10,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=west,piece=19,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=north,piece=1,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=north,piece=10,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=north,piece=19,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=east,piece=1,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=east,piece=10,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=east,piece=19,role=plant": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "facing=south,piece=0,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_0"
+    },
+    "facing=south,piece=1,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_1"
+    },
+    "facing=south,piece=2,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_2"
+    },
+    "facing=south,piece=4,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_4"
+    },
+    "facing=south,piece=5,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_5"
+    },
+    "facing=south,piece=6,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_6"
+    },
+    "facing=south,piece=7,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_7"
+    },
+    "facing=south,piece=8,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_8"
+    },
+    "facing=south,piece=9,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_9"
+    },
+    "facing=south,piece=10,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_10"
+    },
+    "facing=south,piece=11,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_11"
+    },
+    "facing=south,lit=false,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_off"
+    },
+    "facing=south,lit=true,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_on"
+    },
+    "facing=south,piece=13,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_13"
+    },
+    "facing=south,piece=14,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_14"
+    },
+    "facing=south,piece=15,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_15"
+    },
+    "facing=south,piece=16,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_16"
+    },
+    "facing=south,piece=17,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_17"
+    },
+    "facing=south,piece=18,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_18"
+    },
+    "facing=south,piece=19,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_19"
+    },
+    "facing=south,piece=20,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_20"
+    },
+    "facing=south,lit=false,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_off"
+    },
+    "facing=south,lit=true,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_on"
+    },
+    "facing=south,piece=22,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_22"
+    },
+    "facing=south,piece=23,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_23"
+    },
+    "facing=south,piece=24,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_24"
+    },
+    "facing=south,piece=25,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_25"
+    },
+    "facing=south,piece=26,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_26"
+    },
+    "facing=south,piece=27,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_27"
+    },
+    "facing=south,piece=28,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_28"
+    },
+    "facing=south,piece=29,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_29"
+    },
+    "facing=south,piece=30,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_30"
+    },
+    "facing=south,piece=31,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_31"
+    },
+    "facing=west,piece=0,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_0",
+      "y": 90
+    },
+    "facing=west,piece=1,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_1",
+      "y": 90
+    },
+    "facing=west,piece=2,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_2",
+      "y": 90
+    },
+    "facing=west,piece=4,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_4",
+      "y": 90
+    },
+    "facing=west,piece=5,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_5",
+      "y": 90
+    },
+    "facing=west,piece=6,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_6",
+      "y": 90
+    },
+    "facing=west,piece=7,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_7",
+      "y": 90
+    },
+    "facing=west,piece=8,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_8",
+      "y": 90
+    },
+    "facing=west,piece=9,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_9",
+      "y": 90
+    },
+    "facing=west,piece=10,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_10",
+      "y": 90
+    },
+    "facing=west,piece=11,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_11",
+      "y": 90
+    },
+    "facing=west,lit=false,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_off",
+      "y": 90
+    },
+    "facing=west,lit=true,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_on",
+      "y": 90
+    },
+    "facing=west,piece=13,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_13",
+      "y": 90
+    },
+    "facing=west,piece=14,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_14",
+      "y": 90
+    },
+    "facing=west,piece=15,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_15",
+      "y": 90
+    },
+    "facing=west,piece=16,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_16",
+      "y": 90
+    },
+    "facing=west,piece=17,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_17",
+      "y": 90
+    },
+    "facing=west,piece=18,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_18",
+      "y": 90
+    },
+    "facing=west,piece=19,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_19",
+      "y": 90
+    },
+    "facing=west,piece=20,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_20",
+      "y": 90
+    },
+    "facing=west,lit=false,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_off",
+      "y": 90
+    },
+    "facing=west,lit=true,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_on",
+      "y": 90
+    },
+    "facing=west,piece=22,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_22",
+      "y": 90
+    },
+    "facing=west,piece=23,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_23",
+      "y": 90
+    },
+    "facing=west,piece=24,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_24",
+      "y": 90
+    },
+    "facing=west,piece=25,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_25",
+      "y": 90
+    },
+    "facing=west,piece=26,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_26",
+      "y": 90
+    },
+    "facing=west,piece=27,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_27",
+      "y": 90
+    },
+    "facing=west,piece=28,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_28",
+      "y": 90
+    },
+    "facing=west,piece=29,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_29",
+      "y": 90
+    },
+    "facing=west,piece=30,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_30",
+      "y": 90
+    },
+    "facing=west,piece=31,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_31",
+      "y": 90
+    },
+    "facing=north,piece=0,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_0",
+      "y": 180
+    },
+    "facing=north,piece=1,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_1",
+      "y": 180
+    },
+    "facing=north,piece=2,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_2",
+      "y": 180
+    },
+    "facing=north,piece=4,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_4",
+      "y": 180
+    },
+    "facing=north,piece=5,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_5",
+      "y": 180
+    },
+    "facing=north,piece=6,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_6",
+      "y": 180
+    },
+    "facing=north,piece=7,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_7",
+      "y": 180
+    },
+    "facing=north,piece=8,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_8",
+      "y": 180
+    },
+    "facing=north,piece=9,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_9",
+      "y": 180
+    },
+    "facing=north,piece=10,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_10",
+      "y": 180
+    },
+    "facing=north,piece=11,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_11",
+      "y": 180
+    },
+    "facing=north,lit=false,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_off",
+      "y": 180
+    },
+    "facing=north,lit=true,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_on",
+      "y": 180
+    },
+    "facing=north,piece=13,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_13",
+      "y": 180
+    },
+    "facing=north,piece=14,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_14",
+      "y": 180
+    },
+    "facing=north,piece=15,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_15",
+      "y": 180
+    },
+    "facing=north,piece=16,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_16",
+      "y": 180
+    },
+    "facing=north,piece=17,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_17",
+      "y": 180
+    },
+    "facing=north,piece=18,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_18",
+      "y": 180
+    },
+    "facing=north,piece=19,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_19",
+      "y": 180
+    },
+    "facing=north,piece=20,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_20",
+      "y": 180
+    },
+    "facing=north,lit=false,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_off",
+      "y": 180
+    },
+    "facing=north,lit=true,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_on",
+      "y": 180
+    },
+    "facing=north,piece=22,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_22",
+      "y": 180
+    },
+    "facing=north,piece=23,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_23",
+      "y": 180
+    },
+    "facing=north,piece=24,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_24",
+      "y": 180
+    },
+    "facing=north,piece=25,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_25",
+      "y": 180
+    },
+    "facing=north,piece=26,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_26",
+      "y": 180
+    },
+    "facing=north,piece=27,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_27",
+      "y": 180
+    },
+    "facing=north,piece=28,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_28",
+      "y": 180
+    },
+    "facing=north,piece=29,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_29",
+      "y": 180
+    },
+    "facing=north,piece=30,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_30",
+      "y": 180
+    },
+    "facing=north,piece=31,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_31",
+      "y": 180
+    },
+    "facing=east,piece=0,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_0",
+      "y": 270
+    },
+    "facing=east,piece=1,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_1",
+      "y": 270
+    },
+    "facing=east,piece=2,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_2",
+      "y": 270
+    },
+    "facing=east,piece=4,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_4",
+      "y": 270
+    },
+    "facing=east,piece=5,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_5",
+      "y": 270
+    },
+    "facing=east,piece=6,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_6",
+      "y": 270
+    },
+    "facing=east,piece=7,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_7",
+      "y": 270
+    },
+    "facing=east,piece=8,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_8",
+      "y": 270
+    },
+    "facing=east,piece=9,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_9",
+      "y": 270
+    },
+    "facing=east,piece=10,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_10",
+      "y": 270
+    },
+    "facing=east,piece=11,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_11",
+      "y": 270
+    },
+    "facing=east,lit=false,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_off",
+      "y": 270
+    },
+    "facing=east,lit=true,piece=12,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_12_on",
+      "y": 270
+    },
+    "facing=east,piece=13,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_13",
+      "y": 270
+    },
+    "facing=east,piece=14,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_14",
+      "y": 270
+    },
+    "facing=east,piece=15,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_15",
+      "y": 270
+    },
+    "facing=east,piece=16,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_16",
+      "y": 270
+    },
+    "facing=east,piece=17,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_17",
+      "y": 270
+    },
+    "facing=east,piece=18,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_18",
+      "y": 270
+    },
+    "facing=east,piece=19,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_19",
+      "y": 270
+    },
+    "facing=east,piece=20,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_20",
+      "y": 270
+    },
+    "facing=east,lit=false,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_off",
+      "y": 270
+    },
+    "facing=east,lit=true,piece=21,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_21_on",
+      "y": 270
+    },
+    "facing=east,piece=22,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_22",
+      "y": 270
+    },
+    "facing=east,piece=23,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_23",
+      "y": 270
+    },
+    "facing=east,piece=24,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_24",
+      "y": 270
+    },
+    "facing=east,piece=25,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_25",
+      "y": 270
+    },
+    "facing=east,piece=26,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_26",
+      "y": 270
+    },
+    "facing=east,piece=27,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_27",
+      "y": 270
+    },
+    "facing=east,piece=28,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_28",
+      "y": 270
+    },
+    "facing=east,piece=29,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_29",
+      "y": 270
+    },
+    "facing=east,piece=30,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_30",
+      "y": 270
+    },
+    "facing=east,piece=31,role=heavy_column": {
+      "model": "voltex_nuclear:block/column/piece_31",
+      "y": 270
+    },
+    "piece=3,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=32,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=33,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=34,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=35,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=36,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=37,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=38,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=39,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=40,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=41,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=42,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=43,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    },
+    "piece=44,role=heavy_column": {
+      "model": "voltex_nuclear:block/nuclear_casing"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "__comment": "SCRAM (DESIGN step 17): the hull filled with heat and stopped the reactor by itself, not the button; as the Voltex quench.",
+  "parent": "voltex_nuclear:nuclear/chain_reaction",
+  "display": {
+    "icon": {
+      "id": "voltex_nuclear:control_rod"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.scram.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.scram.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reactor_scram": {
+      "trigger": "industrial_core:event",
+      "conditions": {
+        "event": "voltex_nuclear:reactor_scram"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "reactor_scram"
+    ]
+  ]
+}

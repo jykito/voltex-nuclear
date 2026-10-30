@@ -1,0 +1,16 @@
+{
+  "__comment": "Isotope americium_241 (DESIGN step 15, set I-A): the End, a rare thing from a common one; the catalyst stays in the restructor. Fabulous numbers since stage 14.2 (the author on 2026-10-29): a rare thing costs a fortune in the restructor.",
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:molecular_transforming",
+  "ingredient": {
+    "item": "minecraft:apple"
+  },
+  "inputCount": 16,
+  "result": {
+    "item": "minecraft:chorus_fruit",
+    "count": 4
+  },
+  "processingTime": 200,
+  "energyCost": 100000000,
+  "catalyst": "voltex_nuclear:americium_241"
+}

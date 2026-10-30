@@ -1,0 +1,124 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+// Mod identity and the Voltex version are shared with the NeoForge build
+def modProps = new Properties()
+file('../mod.properties').withReader('UTF-8') { modProps.load(it) }
+modProps.each { k, v -> project.ext.set(k, v) }
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = 'VoltexNuclear'
+}
+
+// The file name carries the loader and game version, so the two builds never clash
+tasks.named('jar', Jar).configure {
+    archiveVersion = "${mod_version}-forge-${minecraft_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: mapping_channel, version: mapping_version
+
+    // A dedicated server for the checks of stage 15 (gradlew runServer, folder run/ kept out of git), with Voltex loaded
+    runs {
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'info'
+            args '--nogui'
+            mods {
+                voltex_nuclear {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+// Shared code and resources are compiled into this build; this folder holds only what differs on 1.20.1
+sourceSets {
+    main {
+        java {
+            srcDir '../core/src/main/java'
+            srcDir '../common/src/main/java'
+        }
+        resources {
+            srcDir '../resources'
+            srcDir '../generated/forge-1.20.1'
+        }
+    }
+    test {
+        java {
+            srcDir '../core/src/test/java'
+        }
+    }
+}
+
+repositories {
+    // libs/Voltex-<version>.jar, copied by tools/refresh_libs.js
+    flatDir { dirs 'libs' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // Voltex: the release jar, remapped to the dev names; in the game it is installed as a real mod
+    compileOnly fg.deobf("blank:Voltex:${voltex_version}")
+    runtimeOnly fg.deobf("blank:Voltex:${voltex_version}")   // for runServer only
+    // JEI for the recipe categories; the plugin loads only where JEI is installed
+    compileOnly fg.deobf("blank:jei-${minecraft_version}-forge:${jei_version_forge}")
+    // Jade for the reactor tooltip; the plugin loads only where Jade is installed (the jar from a test instance, not bundled)
+    compileOnly fg.deobf("blank:Jade-1.20.1-Forge:11.13.2")
+    // KubeJS for a pack's reactor parts; the plugin loads only where KubeJS is installed (kubejs.plugins.txt)
+    compileOnly fg.deobf("blank:kubejs-forge:${kubejs_version_forge}")
+    compileOnly fg.deobf("blank:rhino-forge:${rhino_version_forge}")
+    compileOnly fg.deobf("blank:architectury-forge:${architectury_version_forge}")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version: forge_version, forge_version_range: forge_version_range,
+            loader_version_range: loader_version_range,
+            mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors: mod_authors, mod_description: mod_description,
+            voltex_version_range: voltex_version_range,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+        ])
+    }
+    finalizedBy 'reobfJar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

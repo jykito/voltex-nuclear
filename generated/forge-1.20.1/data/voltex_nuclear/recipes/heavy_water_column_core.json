@@ -1,0 +1,34 @@
+{
+  "__comment": "Heavy water column core (DESIGN step 13, the author chose A on 2026-10-28): built on the Voltex fluid enricher (the column enriches water with deuterium), the hot and the cold of the Girdler process at its sides (the advanced heat exchanger and the Voltex cryogenic one, era 5), thermal insulation above, a Voltex control unit below that holds it at era 6 with the electrolyzer, nuclear casing in the corners.",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": {
+      "item": "voltex_nuclear:nuclear_casing"
+    },
+    "T": {
+      "item": "industrial_core:thermal_insulation"
+    },
+    "X": {
+      "item": "industrial_core:advanced_heat_exchanger"
+    },
+    "E": {
+      "item": "industrial_core:fluid_enricher"
+    },
+    "C": {
+      "item": "industrial_core:cryogenic_heat_exchanger"
+    },
+    "U": {
+      "item": "industrial_core:control_unit"
+    }
+  },
+  "pattern": [
+    "NTN",
+    "XEC",
+    "NUN"
+  ],
+  "result": {
+    "item": "voltex_nuclear:heavy_water_column_core",
+    "count": 1
+  }
+}

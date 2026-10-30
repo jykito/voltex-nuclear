@@ -1,0 +1,21 @@
+{
+  "__comment": "Beryllium reflector (DESIGN step 22, variant C): a layer of beryllium on a layer of hardened steel. Era 4.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "tag": "forge:ingots/beryllium"
+    },
+    "H": {
+      "item": "industrial_core:hardened_steel_ingot"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "HHH"
+  ],
+  "result": {
+    "item": "voltex_nuclear:beryllium_reflector",
+    "count": 1
+  }
+}

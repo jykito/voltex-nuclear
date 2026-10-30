@@ -1,0 +1,32 @@
+{
+  "__comment": "Fusion (DESIGN step 19): a torus past its ignition and burning; the core credits the players within 32 blocks.",
+  "parent": "voltex_nuclear:nuclear/tritium",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:torus_core"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.fusion.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.fusion.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "torus_lit": {
+      "trigger": "industrial_core:event",
+      "conditions": {
+        "event": "voltex_nuclear:torus_lit"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "torus_lit"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "__comment": "Control rod drive (DESIGN step 22, the author chose variant B for the expansion chamber): the step drive that holds the chamber's row of control rods, two superconducting strands as its coils on a kronit frame. Era 5, next to the fuel rod assemblies.",
+  "type": "industrial_core:rod_fabrication_recipe",
+  "result": { "id": "voltex_nuclear:control_rod_drive", "count": 1 },
+  "ingredient1": { "item": "industrial_core:superconducting_strand" },
+  "ingredient2": { "item": "industrial_core:kronit" },
+  "count1": 2,
+  "count2": 1,
+  "processingTime": 200,
+  "energyCostPerTick": 400
+}

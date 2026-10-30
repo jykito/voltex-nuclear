@@ -1,0 +1,15 @@
+{
+  "__comment": "Boron (DESIGN steps 6 and 22): Voltex mineral dust in the Voltex ore washer. The washer has no recipe for mineral dust, and the Voltex recipe for sand stays as it is. Era 2.",
+  "type": "industrial_core:ore_washing_recipe",
+  "ingredient": {
+    "item": "industrial_core:mineral_dust"
+  },
+  "inputCount": 2,
+  "waterAmount": 1000,
+  "result": {
+    "item": "voltex_nuclear:boron",
+    "count": 1
+  },
+  "processingTime": 200,
+  "energyCostPerTick": 40
+}

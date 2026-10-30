@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Dev runs
+run/
+run-data/
+
+# Voltex jars to compile against (see tools/refresh_libs.js), not ours to publish here
+libs/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/

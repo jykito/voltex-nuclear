@@ -1,0 +1,15 @@
+{
+  "__comment": "Empty cell (DESIGN, the author chose variant V on 2026-10-27): the Voltex metal former extrudes a seamless steel cell from a hardened steel rod, as real gas cylinders are drawn from billets cut off bar stock. The ingot itself is taken in this mode (it makes the rods), so the cell starts from the rod: one ingot, two rods, two cells. The cells carry deuterium, tritium and helium and come back empty from the torus.",
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:extruding",
+  "ingredient": {
+    "item": "industrial_core:hardened_steel_rod"
+  },
+  "inputCount": 1,
+  "result": {
+    "id": "voltex_nuclear:empty_cell",
+    "count": 1
+  },
+  "processingTime": 140,
+  "energyCost": 100
+}

@@ -1,0 +1,16 @@
+{
+  "__comment": "Isotope gold_198 (DESIGN step 15, set I-A): the Nether, a rare thing from a common one; the catalyst stays in the restructor. Fabulous numbers since stage 14.2 (the author on 2026-10-29): a rare thing costs a fortune in the restructor.",
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:molecular_transforming",
+  "ingredient": {
+    "item": "minecraft:bone_block"
+  },
+  "inputCount": 32,
+  "result": {
+    "id": "minecraft:wither_skeleton_skull",
+    "count": 1
+  },
+  "processingTime": 400,
+  "energyCost": 1000000000,
+  "catalyst": "voltex_nuclear:gold_198"
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "voltex_nuclear:block/torus_core_side",
+    "south": "voltex_nuclear:block/torus_core_front",
+    "north": "voltex_nuclear:block/torus_core_side",
+    "east": "voltex_nuclear:block/torus_core_side",
+    "west": "voltex_nuclear:block/torus_core_side",
+    "up": "voltex_nuclear:block/torus_core_top",
+    "down": "voltex_nuclear:block/torus_core_top"
+  }
+}

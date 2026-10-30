@@ -1,0 +1,17 @@
+{
+  "type": "industrial_core:phase_splitter_recipe",
+  "ingredient": {
+    "item": "voltex_nuclear:spent_fuel_rod"
+  },
+  "inputCount": 1,
+  "result": {
+    "id": "industrial_core:empty_fuel_rod",
+    "count": 1
+  },
+  "result2": {
+    "id": "voltex_nuclear:depleted_uranium",
+    "count": 1
+  },
+  "processingTime": 200,
+  "energyCost": 80
+}

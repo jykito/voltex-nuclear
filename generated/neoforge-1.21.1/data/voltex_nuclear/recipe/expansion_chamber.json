@@ -1,0 +1,31 @@
+{
+  "__comment": "Expansion chamber (DESIGN step 22, the author chose variant B): the core's layout one step higher. A piece of the same pressure vessel in the middle, the control rod drive on top, cryogenic heat exchangers at the sides, kronit below, nuclear casing at the corners. Era 5: four chambers open the 7x7 zone.",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": {
+      "item": "voltex_nuclear:nuclear_casing"
+    },
+    "P": {
+      "item": "voltex_nuclear:control_rod_drive"
+    },
+    "C": {
+      "item": "industrial_core:cryogenic_heat_exchanger"
+    },
+    "V": {
+      "item": "voltex_nuclear:pressure_vessel"
+    },
+    "K": {
+      "item": "industrial_core:kronit"
+    }
+  },
+  "pattern": [
+    "NPN",
+    "CVC",
+    "NKN"
+  ],
+  "result": {
+    "id": "voltex_nuclear:expansion_chamber",
+    "count": 1
+  }
+}

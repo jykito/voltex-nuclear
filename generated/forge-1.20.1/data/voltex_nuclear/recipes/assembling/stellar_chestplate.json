@@ -1,0 +1,40 @@
+{
+  "__comment": "Stellar suit (DESIGN step 12; stage 11.5, the author: make it in the assembler): the Plasma piece with star plates, cryogenic wiring and liquid helium, the pellet's reactor (isotope pellets, palladium foil, a scintillator). 30 s at 16 000 FE/t.",
+  "type": "industrial_core:assembling",
+  "inputs": [
+    {
+      "item": "industrial_core:plasma_chestplate",
+      "count": 1
+    },
+    {
+      "item": "voltex_nuclear:star_plate",
+      "count": 8
+    },
+    {
+      "item": "voltex_nuclear:cryo_wiring",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:isotope_pellet",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:palladium_foil",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:scintillator",
+      "count": 1
+    }
+  ],
+  "fluid": {
+    "fluid": "voltex_nuclear:liquid_helium",
+    "amount": 2000
+  },
+  "result": {
+    "item": "voltex_nuclear:stellar_chestplate",
+    "count": 1
+  },
+  "processingTime": 600,
+  "energyCostPerTick": 16000
+}

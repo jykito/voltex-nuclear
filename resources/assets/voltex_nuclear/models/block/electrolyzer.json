@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "front": "voltex_nuclear:block/electrolyzer_front",
+    "side": "voltex_nuclear:block/electrolyzer_side",
+    "top": "voltex_nuclear:block/electrolyzer_top",
+    "bottom": "voltex_nuclear:block/electrolyzer_bottom",
+    "particle": "voltex_nuclear:block/electrolyzer_side"
+  }
+}

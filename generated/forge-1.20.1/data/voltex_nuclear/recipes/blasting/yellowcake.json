@@ -1,0 +1,17 @@
+{
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": {
+    "tag": "forge:dusts/uranium"
+  },
+  "ingredientCount": 1,
+  "fuel": {
+    "tag": "forge:dusts/coal"
+  },
+  "fuelCount": 1,
+  "result": {
+    "item": "voltex_nuclear:yellowcake",
+    "count": 1
+  },
+  "processingTime": 300,
+  "requiredHeat": 1600
+}

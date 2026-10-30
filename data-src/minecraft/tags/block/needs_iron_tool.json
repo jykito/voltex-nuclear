@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "voltex_nuclear:uranium_ore",
+    "voltex_nuclear:deepslate_uranium_ore",
+    "voltex_nuclear:raw_uranium_block"
+  ]
+}

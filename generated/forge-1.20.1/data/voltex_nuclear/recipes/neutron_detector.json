@@ -1,0 +1,28 @@
+{
+  "__comment": "Reactor core part (DESIGN step 22): the scintillator flashes, the photonic lens catches the light, the microcontroller (the key of era 4) counts, lead shields.",
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrial_core:photonic_lens"
+    },
+    "L": {
+      "tag": "forge:plates/lead"
+    },
+    "S": {
+      "item": "voltex_nuclear:scintillator"
+    },
+    "M": {
+      "item": "industrial_core:microcontroller"
+    }
+  },
+  "pattern": [
+    " P ",
+    "LSL",
+    " M "
+  ],
+  "result": {
+    "item": "voltex_nuclear:neutron_detector",
+    "count": 1
+  }
+}

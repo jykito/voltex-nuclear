@@ -1,0 +1,14 @@
+{
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:crushing",
+  "ingredient": {
+    "tag": "forge:raw_materials/uranium"
+  },
+  "inputCount": 1,
+  "result": {
+    "item": "voltex_nuclear:uranium_dust",
+    "count": 2
+  },
+  "processingTime": 140,
+  "energyCost": 50
+}

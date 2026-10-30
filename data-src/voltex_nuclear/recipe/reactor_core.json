@@ -1,0 +1,31 @@
+{
+  "__comment": "Reactor core (DESIGN step 22, the author chose variant C): the pressure vessel in the middle, the neutron detector on top, the advanced heat exchangers at the sides, the fluid valve below for the water, nuclear casing at the corners.",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": {
+      "item": "voltex_nuclear:nuclear_casing"
+    },
+    "D": {
+      "item": "voltex_nuclear:neutron_detector"
+    },
+    "X": {
+      "item": "industrial_core:advanced_heat_exchanger"
+    },
+    "V": {
+      "item": "voltex_nuclear:pressure_vessel"
+    },
+    "F": {
+      "item": "industrial_core:fluid_valve"
+    }
+  },
+  "pattern": [
+    "NDN",
+    "XVX",
+    "NFN"
+  ],
+  "result": {
+    "id": "voltex_nuclear:reactor_core",
+    "count": 1
+  }
+}

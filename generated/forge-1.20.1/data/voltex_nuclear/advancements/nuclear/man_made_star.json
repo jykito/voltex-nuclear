@@ -1,0 +1,38 @@
+{
+  "__comment": "Man-made star (DESIGN steps 21 and 28): the first star alloy out of the star forge. A challenge after the torus, which the forge stands on; the reward is only this, no item or block.",
+  "parent": "voltex_nuclear:nuclear/fusion",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:star_alloy"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.man_made_star.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.man_made_star.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_star_alloy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:star_alloy"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_star_alloy"
+    ]
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "variants": {
+    "formed=false": {
+      "model": "voltex_nuclear:block/hot_cell_glass"
+    },
+    "facing=south,formed=true,pane=0": {
+      "model": "voltex_nuclear:block/radiochem/cell_10"
+    },
+    "facing=south,formed=true,pane=1": {
+      "model": "voltex_nuclear:block/radiochem/cell_19"
+    },
+    "facing=west,formed=true,pane=0": {
+      "model": "voltex_nuclear:block/radiochem/cell_10",
+      "y": 90
+    },
+    "facing=west,formed=true,pane=1": {
+      "model": "voltex_nuclear:block/radiochem/cell_19",
+      "y": 90
+    },
+    "facing=north,formed=true,pane=0": {
+      "model": "voltex_nuclear:block/radiochem/cell_10",
+      "y": 180
+    },
+    "facing=north,formed=true,pane=1": {
+      "model": "voltex_nuclear:block/radiochem/cell_19",
+      "y": 180
+    },
+    "facing=east,formed=true,pane=0": {
+      "model": "voltex_nuclear:block/radiochem/cell_10",
+      "y": 270
+    },
+    "facing=east,formed=true,pane=1": {
+      "model": "voltex_nuclear:block/radiochem/cell_19",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "__comment": "Uranium (DESIGN step 1): the first raw uranium; the branch starts after the Voltex crusher, which makes it dust.",
+  "parent": "industrial_core:voltex/crusher",
+  "display": {
+    "icon": {
+      "id": "voltex_nuclear:raw_uranium"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.uranium.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.uranium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_raw_uranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:raw_uranium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_uranium"
+    ]
+  ]
+}

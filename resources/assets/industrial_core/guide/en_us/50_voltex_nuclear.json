@@ -1,0 +1,1182 @@
+{
+  "name": "Nuclear",
+  "addon": "Voltex:Nuclear",
+  "entries": [
+    {
+      "name": "About",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:uranium_ore",
+          "title": "Voltex:Nuclear",
+          "subtitle": "Uranium, fission and fusion"
+        },
+        {
+          "type": "text",
+          "text": "A chapter about the add-on's branch, from uranium ore to the fusion torus. You mine uranium, enrich it in a centrifuge cascade, lay out a fission reactor cell by cell, reprocess its spent fuel, gather heavy water and light the torus. At the top stand the star forge and the Stellar suit. The entries follow the branch in order; the recipes are in JEI."
+        }
+      ]
+    },
+    {
+      "name": "Uranium",
+      "id": "uranium",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:raw_uranium",
+          "title": "Uranium",
+          "subtitle": "Ore, dust, yellowcake"
+        },
+        {
+          "type": "text",
+          "text": "Uranium ore lies deep, below height 32, and it is rare: about one vein in seven chunks. One vein lasts a long time, though. The ore drops **raw uranium**."
+        },
+        {
+          "type": "text",
+          "text": "The **Geiger counter** helps you find it. Hold it in your hand: the closer the ore, the faster it clicks, and a signal bar grows over the hotbar. It hears ore up to 32 blocks away and uses no energy."
+        },
+        {
+          "type": "text",
+          "text": "From here the Voltex machines take over. The crusher turns ore or raw uranium into two **uranium dust**. The dust melts together with coal dust in the blast furnace into **yellowcake**; the furnace needs 1,600 heat. The yellowcake goes into the centrifuge cascade."
+        },
+        {
+          "type": "items",
+          "items": [
+            "voltex_nuclear:uranium_ore",
+            "voltex_nuclear:deepslate_uranium_ore",
+            "voltex_nuclear:raw_uranium",
+            "voltex_nuclear:uranium_dust",
+            "voltex_nuclear:yellowcake",
+            "voltex_nuclear:geiger_counter"
+          ]
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            { "text": "Centrifuge Cascade", "to": "cascade" },
+            { "text": "Blast Furnace", "to": "Small Blast Furnace" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Centrifuge Cascade",
+      "id": "cascade",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:cascade_core",
+          "title": "Centrifuge Cascade",
+          "subtitle": "Multiblock, a row of 2 to 12 columns",
+          "tags": [
+            { "text": "Energy", "color": "#00FFCC" }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Enriches uranium: it turns yellowcake into enriched uranium, and the rest comes out as **depleted uranium**."
+        },
+        {
+          "type": "text",
+          "text": "It is a row of columns. On the left stands the **cabinet**: a plinth, two nuclear casings and the **core** on top. To the right of it, as you face the core, run the columns: plinth, casing, **centrifuge**, casing. A row has 2 to 12 columns and can grow: place a new column and the cascade takes it in within a second. Click the core with the Voltex structure wand and it fills in the cabinet and the columns up to the farthest one you have started."
+        },
+        {
+          "type": "text",
+          "text": "You pick the stage in the core window. **Low** makes low enriched uranium and runs at full speed from 4 columns; a row of 2 or 3 works too, only slower. **High** makes high enriched uranium and opens at 10 columns. Extra columns make the work faster, while the energy per uranium stays the same."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            { "key": "Low stage", "value": "4 yellowcake: 1 uranium and 3 depleted, 20 s on 4 columns" },
+            { "key": "High stage", "value": "12 yellowcake: 1 uranium and 11 depleted, 40 s on 10 columns" },
+            { "key": "Tails", "value": "8 depleted, when there is no yellowcake: 1 uranium, 40 s on 4 columns" },
+            { "key": "Energy", "value": "40 FE a tick per column" }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Ports take the place of any block of the plinth and the cabinet, and pipes reach them from the front, the back and below. You put yellowcake into the **input port**, take the uranium and the depleted uranium from the **output port**, and bring energy to a Voltex **energy connector**."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "Z": "voltex_nuclear:centrifuge",
+              "K": "voltex_nuclear:cascade_core",
+              "E": "industrial_core:multiblock_energy_port",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port"
+            },
+            "layers": [
+              ["ECCCO"],
+              ["ICCCC"],
+              ["CZZZZ"],
+              ["KCCCC"]
+            ],
+            "model": "voltex_nuclear:cascade"
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Keep the depleted uranium: with plutonium from the radiochemical plant it makes MOX fuel. Put it into the input port, and with no yellowcake the low stage re-enriches the tails: one uranium from 8 depleted, twice as long."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            { "text": "Pellet Press", "to": "pellet_press" },
+            { "text": "Ports", "to": "late_ports" },
+            { "text": "Structure Wand", "to": "late_wand" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pellet Press",
+      "id": "pellet_press",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:pellet_press",
+          "title": "Pellet Press",
+          "subtitle": "One-block machine"
+        },
+        {
+          "type": "text",
+          "text": "Presses enriched uranium into pellets and loads them into a Voltex **empty rod**. Low enriched uranium gives a low enriched rod, high enriched a high enriched one. Boron carbide is loaded the same way and gives a **control rod**. Voltex lithium goes into an **empty cell** and gives a **lithium blank** for the irradiation channel. Each takes 10 seconds, 40 FE a tick."
+        },
+        {
+          "type": "text",
+          "text": "The press has four slots for Voltex upgrades: accelerators, parallel processing modules, the puller and the pusher work as they do in Voltex machines."
+        },
+        {
+          "type": "text",
+          "text": "Dual and quad assemblies are put together by the Voltex **rod fabricator** on invar plates. An assembly takes one cell in the reactor, shines stronger than a single rod and burns longer, so each rod in it gives more energy."
+        },
+        {
+          "type": "items",
+          "items": [
+            "voltex_nuclear:pellet_press",
+            "voltex_nuclear:low_enriched_uranium",
+            "voltex_nuclear:high_enriched_uranium",
+            "voltex_nuclear:low_enriched_fuel_rod",
+            "voltex_nuclear:high_enriched_fuel_rod",
+            "voltex_nuclear:boron_carbide",
+            "voltex_nuclear:control_rod"
+          ]
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            { "text": "Zone Parts", "to": "reactor_parts" },
+            { "text": "Rod Fabricator", "to": "Rod Fabricator" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fission Reactor",
+      "id": "fission_reactor",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:reactor_core",
+          "title": "Fission Reactor",
+          "subtitle": "Multiblock 5×5, 4 high",
+          "tags": [
+            { "text": "Energy", "color": "#00FFCC" },
+            { "text": "Heat", "color": "#FFD000" }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Fuel rods in it give energy and heat. How much is decided by the layout: what you put into the cells of the zone and what ends up next to each rod."
+        },
+        {
+          "type": "text",
+          "text": "It is built from **nuclear casing** in four layers, each 5×5 without the corners. The **core** goes at the front, in the middle of the top layer. In the middle of each side of the second layer is a socket for an **expansion chamber**; plain casing can go there too. Once the build is complete, the reactor forms by itself and hides the blocks under its model. Click the core with the Voltex structure wand and it lays all the casing; chambers and ports you put in its place yourself."
+        },
+        {
+          "type": "text",
+          "text": "Without chambers the zone has 5×5 cells. Each chamber opens one more row on its side, and a corner cell opens with both chambers next to it. With all four the zone is 7×7."
+        },
+        {
+          "type": "text",
+          "text": "Ports go into the plinth, the outer blocks of the bottom layer, three on each side. Into the Voltex **input port** you put rods and parts and pour water and coolant. From the **output port** you take spent rods and hot coolant. Energy leaves through the **energy output connector**, which swaps one for one with the Voltex energy connector right in a crafting table."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "X": "voltex_nuclear:expansion_chamber",
+              "K": "voltex_nuclear:reactor_core",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port",
+              "N": "voltex_nuclear:energy_output_port"
+            },
+            "layers": [
+              [".ICO.", "CCCCC", "CCCCC", "CCCCC", ".CNC."],
+              [".CXC.", "CCCCC", "XCCCX", "CCCCC", ".CXC."],
+              [".CCC.", "CCCCC", "CCCCC", "CCCCC", ".CCC."],
+              [".CCC.", "CCCCC", "CCCCC", "CCCCC", ".CKC."]
+            ],
+            "model": "voltex_nuclear:reactor"
+          }
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            { "text": "Reactor Window", "to": "reactor_window" },
+            { "text": "Ports", "to": "late_ports" },
+            { "text": "Structure Wand", "to": "late_wand" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reactor Window",
+      "id": "reactor_window",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:control_rod",
+          "title": "Reactor Window",
+          "subtitle": "Start, power, SCRAM"
+        },
+        {
+          "type": "text",
+          "text": "Click the core. On the left is the zone; on the right, the output in FE a tick, the heat of the zone, the hull heat, two knobs, the Watcher's slot and the buttons. Under the zone are the energy buffer and three output slots."
+        },
+        {
+          "type": "text",
+          "text": "**Start** turns the reactor on, and a second press stops it. The **power knob** lowers the output, the heat and the fuel use together. It goes below 100% only with **control rods** in the zone, each allowing another 20%. Without them the reactor always runs at full power. The red mark on the knob shows how low it can go right now."
+        },
+        {
+          "type": "text",
+          "text": "**Into heat** sends part of the output as heat into the heat pipes at the Voltex heat port, 70 FE for each unit of heat. What the pipes do not take stays energy."
+        },
+        {
+          "type": "text",
+          "text": "Energy gathers in a buffer of 10,000,000 FE and goes out every tick into the cables at the output connector. When the buffer is full, the excess is lost and the fuel keeps burning."
+        },
+        {
+          "type": "text",
+          "text": "**SCRAM** shuts the reactor down at once, and fires by itself when the hull overheats. **Reset** cools the hull, and after it the reactor starts again with **Start**."
+        },
+        {
+          "type": "text",
+          "text": "The map button tints the zone by neutron flux or by heat, and a third press turns the tint off. Hover over a cell to see its flux and heat."
+        },
+        {
+          "type": "tip",
+          "text": "A part you put in by hand is remembered by its cell. When the cell empties, a pale ghost shows there, and once a second the input port puts the same part in. Take the part out by hand and the cell forgets it."
+        }
+      ]
+    },
+    {
+      "name": "Zone Parts",
+      "id": "reactor_parts",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:low_enriched_fuel_rod",
+          "title": "Zone Parts",
+          "subtitle": "Fuel, moderators, absorbers"
+        },
+        {
+          "type": "text",
+          "text": "Every rod sends out neutrons, and the stronger the **flux** in its cell, the more energy and heat it gives. A single low enriched rod on its own gives 3,500 FE a tick at full power."
+        },
+        {
+          "type": "text",
+          "text": "A **high enriched** rod is twice as strong and runs hotter. **Dual** and **quad** assemblies take one cell and shine stronger than a single rod."
+        },
+        {
+          "type": "items",
+          "label": "Fuel",
+          "items": [
+            "voltex_nuclear:low_enriched_fuel_rod",
+            "voltex_nuclear:low_enriched_fuel_rod_dual",
+            "voltex_nuclear:low_enriched_fuel_rod_quad",
+            "voltex_nuclear:high_enriched_fuel_rod",
+            "voltex_nuclear:high_enriched_fuel_rod_dual",
+            "voltex_nuclear:high_enriched_fuel_rod_quad"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Neighbours change the flux. A rod next door adds half its strength. A Voltex **graphite rod** gathers the flux of the rods around it and passes it to each rod next to it, so graphite between rods raises the output a lot. The **heavy water moderator** does the same, only stronger. The **beryllium reflector** gives a rod back part of its own flux and goes along the edge of the zone. The **boron absorber** takes flux from the rods next to it."
+        },
+        {
+          "type": "text",
+          "text": "A **control rod** does not damp its neighbours, it only lets the power knob take the reactor another 20% lower. A **lithium blank** goes into a cell itself and takes flux from its neighbours like an absorber. Once irradiated it becomes a **tritium cell**: that goes into the third output slot, and the input port puts a new blank into the cell. The bar under the blank shows how far it is irradiated. Fusion will need the tritium."
+        },
+        {
+          "type": "items",
+          "label": "Other parts",
+          "items": [
+            "industrial_core:graphite_rod",
+            "voltex_nuclear:heavy_water_moderator",
+            "voltex_nuclear:beryllium_reflector",
+            "voltex_nuclear:boron_absorber",
+            "voltex_nuclear:control_rod",
+            "voltex_nuclear:lithium_blank",
+            "voltex_nuclear:tritium_cell"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "At full power a single rod burns for an hour, a dual assembly for an hour and a half, a quad for two and a half, longer at lower power. Its wear shows as a bar on the item and stays with the rod if you move it to another reactor. A burnt-out rod goes into the output slot and on to the output port. If it has nowhere to go, the reactor waits and uses no fuel. The Voltex phase splitter takes a spent rod apart into an empty rod and depleted uranium."
+        }
+      ]
+    },
+    {
+      "name": "Irradiation Channel",
+      "id": "irradiation_channel",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:lithium_blank",
+          "title": "Irradiation Channel",
+          "subtitle": "Blanks, tritium, isotopes"
+        },
+        {
+          "type": "text",
+          "text": "The reactor does more than heat and power: it also **irradiates**. Instead of a rod you put a **blank** into a cell of the zone. The rods next to it send neutrons into its cell, and every tick the blank gathers irradiation: the flux that came in, times the reactor's power. Once it has enough, it turns into the finished item right there in the cell. The bar under the blank shows how far it has come."
+        },
+        {
+          "type": "text",
+          "text": "How fast depends on **place** and **power**. A blank sees the rods in the four cells next to it and, through graphite or heavy water next to it, the rods around those too. Surrounded by rods on every side it ripens fast; at the edge of the zone next to one rod, slowly. At half power irradiation goes half as fast, and a stopped reactor does not irradiate at all. A blank takes its flux from its neighbours, as an absorber does, so every blank in the zone lowers the output a little."
+        },
+        {
+          "type": "text",
+          "text": "In a good place at full power a lithium blank ripens in about 30 seconds, an isotope blank in 10 minutes, the blanks of the catalyst isotopes in 20 minutes. A blank taken out remembers how much it has gathered and goes on in any reactor. The finished item goes to the output slot and the input port puts the next blank into the cell, so the channel runs by itself."
+        },
+        {
+          "type": "text",
+          "text": "The **pellet press** makes the blanks: it presses a material into an empty cell. Voltex lithium gives the lithium blank, depleted uranium the isotope blank, a Voltex graphite rod the graphite blank, a gold ingot the gold blank, plutonium the plutonium blank, a dried kelp block the sodium blank."
+        },
+        {
+          "type": "items",
+          "label": "Blanks",
+          "items": [
+            "voltex_nuclear:lithium_blank",
+            "voltex_nuclear:isotope_blank",
+            "voltex_nuclear:graphite_blank",
+            "voltex_nuclear:gold_blank",
+            "voltex_nuclear:plutonium_blank",
+            "voltex_nuclear:sodium_blank"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The **lithium** blank becomes a **tritium cell**, the fuel of the fusion torus. The **isotope** blank becomes the **isotope pellet** that the Stellar chestplate feeds on."
+        },
+        {
+          "type": "text",
+          "text": "The other four give **isotopes**, catalysts of the Voltex restructor. A catalyst stays in the restructor and is never spent, so you make it once, though it takes a while. Each turns common things into rare ones of its own family, and it costs: the restructor asks a handful of the common thing and hundreds of millions of FE for a rare one. **Carbon-14** gives the ancient: ancient debris from obsidian, echo shards from amethyst, sniffer eggs from eggs. **Gold-198** gives the Nether: ghast tears from quartz, wither skeleton skulls from bone blocks, totems of undying from emerald blocks. **Americium-241** gives the End: chorus fruit from apples, shulker shells from ender pearls, dragon's breath into an empty bottle. **Sodium-24** gives the sea: sponges from moss, nautilus shells from bone blocks, hearts of the sea from nautilus shells."
+        },
+        {
+          "type": "items",
+          "label": "What comes out",
+          "items": [
+            "voltex_nuclear:tritium_cell",
+            "voltex_nuclear:isotope_pellet",
+            "voltex_nuclear:carbon_14",
+            "voltex_nuclear:gold_198",
+            "voltex_nuclear:americium_241",
+            "voltex_nuclear:sodium_24"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Heat and Cooling",
+      "id": "reactor_heat",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:cryo_cell",
+          "title": "Heat and Cooling",
+          "subtitle": "Outlets, hull, SCRAM"
+        },
+        {
+          "type": "text",
+          "text": "The heat of a rod is split evenly among the **outlets** next to it: heat vents, condensators and cryo cells. A Voltex **heat exchanger** takes no heat itself; it passes heat along a chain of exchangers to the outlets next to any of them."
+        },
+        {
+          "type": "text",
+          "text": "Heat with nowhere to go, and what an outlet cannot take in time, goes into the **hull**. The hull cools a little by itself, and when it overheats, SCRAM fires."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            { "key": "Heat vent", "value": "80 heat a tick, needs nothing" },
+            { "key": "Condensator", "value": "150 heat a tick while there is water, 1 mB per 20 heat" },
+            { "key": "Cryo cell", "value": "600 heat a tick while there is coolant, 1 mB per 600 heat" },
+            { "key": "Hull", "value": "holds 20,000 heat, cools 20 a tick" }
+          ]
+        },
+        {
+          "type": "items",
+          "items": [
+            "industrial_core:heat_vent",
+            "industrial_core:condensator",
+            "voltex_nuclear:cryo_cell",
+            "industrial_core:heat_exchanger"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The reactor takes water and coolant from the input ports. The water boils away. A cryo cell gives the same amount of hot coolant to the output port and works only while there is room for it there. So switch the output port to the mode \"Fluid\" or \"Items + fluid\". Under a condensator and a cryo cell the window shows a bar of how loaded the cell is."
+        },
+        {
+          "type": "tip",
+          "text": "One Voltex water generator is enough for several reactors."
+        }
+      ]
+    },
+    {
+      "name": "Reactor Schemes",
+      "id": "reactor_schemes",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:high_enriched_fuel_rod_dual",
+          "title": "Reactor Schemes",
+          "subtitle": "Ready layouts in JEI"
+        },
+        {
+          "type": "text",
+          "text": "Ready layouts are in JEI, under \"Reactor schemes\". Open the uses of any zone part to see the schemes with it. Under the grid it says how much energy and heat the scheme gives and at what power to run it. The numbers come from the same model the reactor runs on, so they match the window. The schemes go step by step: the first reactor, single rods, dual and quad assemblies, high enrichment, a closed cycle with MOX, irradiators for tritium and isotopes, heavy water. The tooltip over the lines shows how many rods a scheme burns an hour."
+        },
+        {
+          "type": "text",
+          "text": "Open the reactor window and press **+** on a scheme. Parts from your inventory go into the empty cells, and the other cells remember their part as a ghost. JEI marks in red what you do not have; the input port puts it in later. Cells that lack an expansion chamber are marked red too."
+        },
+        {
+          "type": "text",
+          "text": "If a cell already holds a different part, the part stays and the window frames the cell in red. Take it out and the cell waits for the part from the scheme."
+        },
+        {
+          "type": "tip",
+          "text": "Ghosts work without JEI as well: lay the parts by hand once, and the input port keeps the layout up by itself."
+        }
+      ]
+    },
+    {
+      "name": "The Watcher",
+      "id": "watcher",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:core_sample",
+          "title": "The Watcher",
+          "subtitle": "Nanites that watch the reactor"
+        },
+        {
+          "type": "text",
+          "text": "While the reactor works it puts a **core sample** into its second output slot: once every five minutes at full power, less often below it. The samples go out through the output port along with the spent rods."
+        },
+        {
+          "type": "text",
+          "text": "In the Voltex **evolution chamber** a strain fed on samples becomes a **watcher**. The sample is eaten. A watcher's affinity is its knowledge of the reactor, as a scientist's is of its topic."
+        },
+        {
+          "type": "text",
+          "text": "The strain goes into the slot on the right of the reactor window. When the hull heats up, the Watcher eases the power off by itself before it comes to SCRAM. Knowing nothing it starts at 90 % of the hull's heat and pulls slowly; knowing all it starts at 60 % and pulls fast. It never goes below the red mark of the control rods. Next to the slot you see what it does: watches, or has eased the power off."
+        },
+        {
+          "type": "text",
+          "text": "A knowing Watcher also adds to the output, up to 15 % at full knowledge. It burns no more fuel for it."
+        },
+        {
+          "type": "tip",
+          "text": "An unstable strain slips now and then: it eases a cold reactor off, or stops watching for half a minute. The strain's tooltip shows its stability; bring it up in the evolution chamber."
+        },
+        {
+          "type": "items",
+          "items": [
+            "voltex_nuclear:core_sample",
+            "industrial_core:evolution_chamber",
+            "industrial_core:nanite_strain"
+          ]
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Reactor Window",
+              "to": "reactor_window"
+            },
+            {
+              "text": "Evolution Chamber",
+              "to": "nanite_chamber"
+            },
+            {
+              "text": "Nanites",
+              "to": "nanites"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radiochemical Plant",
+      "id": "radiochem",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:radiochem_core",
+          "title": "Radiochemical Plant",
+          "subtitle": "Multiblock 5 × 3, 3 high",
+          "tags": [
+            {
+              "text": "Energy",
+              "color": "#00FFCC"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Takes **spent rods** apart. Every rod gives back its **empty rod**, and the plant gathers the rest in shares and hands it out whole: **low enriched uranium**, **plutonium**, **depleted uranium** and now and then **palladium**."
+        },
+        {
+          "type": "text",
+          "text": "It is a hot cell and two tanks. The **core** stands in the left pillar of the cell on the middle level, two blocks of **hot cell glass** to its right, the rest is nuclear casing: 5 blocks wide, 3 deep, 3 high. A click on the core with the Voltex structure wand builds the rest."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            {
+              "key": "Per 4 rods",
+              "value": "1 low enriched uranium, 1 plutonium, 2 depleted"
+            },
+            {
+              "key": "Palladium",
+              "value": "1 per 16 rods"
+            },
+            {
+              "key": "A rod",
+              "value": "10 s, 200 FE a tick, 1000 mB of water"
+            },
+            {
+              "key": "Assemblies",
+              "value": "×2 and ×4 count as 2 and 4 rods"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Ports go into the bottom level only. Put the rods and the water into an **input port** (the water can go into the same one in the \"Items + fluid\" mode, or into a second one), take everything out of an **output port**, and bring energy to a Voltex **energy connector**. The window shows the water and how much is gathered towards the next uranium, plutonium, depleted uranium and palladium."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "K": "voltex_nuclear:radiochem_core",
+              "G": "voltex_nuclear:hot_cell_glass",
+              "E": "industrial_core:multiblock_energy_port",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port"
+            },
+            "layers": [
+              [
+                "CCCCC",
+                "CCCCC",
+                "EICOC"
+              ],
+              [
+                "CCCCC",
+                "CCCCC",
+                "KGGCC"
+              ],
+              [
+                "CCCCC",
+                "CCCCC",
+                "CCCCC"
+              ]
+            ],
+            "model": "voltex_nuclear:radiochem"
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Plutonium and two depleted uranium sinter into **MOX fuel** in the blast furnace, and the pellet press loads it into an empty rod. A MOX rod is stronger than a low enriched one and runs hotter. Palladium goes to the star forge for star alloy, and palladium foil goes into the forge's core and the Stellar chestplate."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Pellet Press",
+              "to": "pellet_press"
+            },
+            {
+              "text": "Fission Reactor",
+              "to": "fission_reactor"
+            },
+            {
+              "text": "Ports",
+              "to": "late_ports"
+            },
+            {
+              "text": "Structure Wand",
+              "to": "late_wand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Heavy Water Column",
+      "id": "heavy_water_column",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:heavy_water_column_core",
+          "title": "Heavy Water Column",
+          "subtitle": "Multiblock 3 × 3 and a pillar, 4 to 8 tiers",
+          "tags": [
+            {
+              "text": "Energy",
+              "color": "#00FFCC"
+            },
+            {
+              "text": "Heat",
+              "color": "#FFD000"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Gathers **heavy water** from plain water: water grows heavy between heat and cold. The lower half of the column is hot, the upper half cold. Heavy water goes into the **electrolyzer** for deuterium."
+        },
+        {
+          "type": "text",
+          "text": "The column stands right on the ground and grows in **tiers**, as the centrifuge cascade grows in columns: a tier is a 3 × 3 layer of nuclear casing, from 4 to 8 of them. The **core** stands in the middle of the front side of the lowest tier. To the right of the column, as you face the core, by the middle of its side stands the **pillar**, 6 blocks high: it holds the Voltex ports, casing fills the free places. A click on the core with the Voltex structure wand builds the pillar and the tiers up to the highest one you started."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            {
+              "key": "8 tiers",
+              "value": "25 mB of water a tick into 0.5 mB of heavy, 160 FE a tick"
+            },
+            {
+              "key": "4 tiers",
+              "value": "half as fast, 80 FE a tick"
+            },
+            {
+              "key": "Water to heavy",
+              "value": "50 to 1"
+            },
+            {
+              "key": "Heat",
+              "value": "from 1 200 in the heat ports, not spent"
+            },
+            {
+              "key": "Coolant",
+              "value": "0.25 mB a tick per cold tier, as much hot back"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The pillar has six places for ports: two **input ports** (water and Voltex **coolant**; a port has one tank, so each fluid takes its own), two **output ports** in the \"Fluid\" or \"Items + fluid\" mode (heavy water and hot coolant), a **heat port** and an **energy connector**. Heat comes from any source of the heat network: a thermogenerator, a blast furnace, the reactor through its \"Into heat\" share. With no coolant the column stands, short of it it runs slower."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "K": "voltex_nuclear:heavy_water_column_core",
+              "E": "industrial_core:multiblock_energy_port",
+              "H": "industrial_core:multiblock_heat_port",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port"
+            },
+            "layers": [
+              [
+                "CCC.",
+                "CCCE",
+                "CKC."
+              ],
+              [
+                "CCC.",
+                "CCCH",
+                "CCC."
+              ],
+              [
+                "CCC.",
+                "CCCI",
+                "CCC."
+              ],
+              [
+                "CCC.",
+                "CCCI",
+                "CCC."
+              ],
+              [
+                "....",
+                "...O",
+                "...."
+              ],
+              [
+                "....",
+                "...O",
+                "...."
+              ]
+            ],
+            "model": "voltex_nuclear:heavy_water_column"
+          }
+        },
+        {
+          "type": "tip",
+          "text": "A heat port with nothing feeding it cools down by itself. Run a heat pipe to it from a steady source: below the threshold the column stops, and the thermometer in its window shows it."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Electrolyzer",
+              "to": "electrolyzer"
+            },
+            {
+              "text": "Heat Pipes",
+              "to": "Heat Pipes"
+            },
+            {
+              "text": "Coolant",
+              "to": "Coolant"
+            },
+            {
+              "text": "Ports",
+              "to": "late_ports"
+            },
+            {
+              "text": "Structure Wand",
+              "to": "late_wand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electrolyzer",
+      "id": "electrolyzer",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:electrolyzer",
+          "title": "Electrolyzer",
+          "subtitle": "One-block machine"
+        },
+        {
+          "type": "text",
+          "text": "Splits **heavy water** and fills an **empty cell** with deuterium. One **deuterium cell** takes 250 mB of heavy water and 10 seconds at 800 FE a tick. Deuterium cells go into the fusion torus together with tritium cells."
+        },
+        {
+          "type": "text",
+          "text": "Pipes bring the heavy water from any side, the tank holds 8000 mB. The electrolyzer takes no plain water and no other fluid. Empty cells go in from the top and the sides, deuterium cells come out from the bottom and the sides."
+        },
+        {
+          "type": "text",
+          "text": "Heavy water is made from plain water in the heavy water column."
+        },
+        {
+          "type": "text",
+          "text": "The electrolyzer has four slots for Voltex upgrades: accelerators, parallel processing modules, the puller and the pusher work as in the Voltex machines."
+        },
+        {
+          "type": "items",
+          "items": [
+            "voltex_nuclear:electrolyzer",
+            "voltex_nuclear:empty_cell",
+            "voltex_nuclear:deuterium_cell"
+          ]
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Fusion Torus",
+              "to": "torus"
+            },
+            {
+              "text": "Heavy Water Column",
+              "to": "heavy_water_column"
+            },
+            {
+              "text": "Pellet Press",
+              "to": "pellet_press"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fusion Torus",
+      "id": "torus",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:torus_core",
+          "title": "Fusion Torus",
+          "subtitle": "Multiblock 7×7, 3 high, stands of ports",
+          "tags": [
+            {
+              "text": "Energy",
+              "color": "#00FFCC"
+            },
+            {
+              "text": "Heat",
+              "color": "#FFD000"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The top of the add-on. The torus burns **deuterium** with **tritium** and gives 260M FE a tick. Ignition takes 1B FE from the torus's buffer; after that the plasma keeps itself going while there is fuel and Voltex **superfluid condensate** for the coils. The burnt fuel turns into **helium**."
+        },
+        {
+          "type": "text",
+          "text": "The torus stands right on the ground: three layers of nuclear casing in a 7×7 round with its corners cut in steps. The **core** stands in the middle layer, in the middle of the front side. The middle layer holds eight **torus coils**, two by each side. In the four empty corners of the square stand the **stands**, two blocks each: any of their blocks may be a Voltex port, casing takes the rest. A click on the core with the Voltex structure wand lays the casing and the coils; the ports you place yourself."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            {
+              "key": "Output",
+              "value": "260M FE a tick at 50 % tritium"
+            },
+            {
+              "key": "Plasma window",
+              "value": "25 to 75 % tritium, half the output at the edge"
+            },
+            {
+              "key": "Fuel",
+              "value": "4 units a tick, deuterium and tritium together, 1 000 in a cell"
+            },
+            {
+              "key": "Ignition",
+              "value": "1B FE over 10 seconds"
+            },
+            {
+              "key": "Condensate",
+              "value": "5 mB a second"
+            },
+            {
+              "key": "Helium",
+              "value": "one unit for every two burnt"
+            },
+            {
+              "key": "Output cables",
+              "value": "only the Voltex Netherite Fiber Cable carries it all; a T3 bank takes 100M a tick"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The **deuterium** and **tritium** cells and the condensate go into an **input port** in the \"Items + fluid\" mode, or into separate ports. Empty cells and helium cells leave through the **output port**: helium fills the empty cells the fuel leaves behind. The ignition reserve of 1B lies in the torus's buffer. The Voltex **energy connector** charges it the first time; after that the torus charges it itself from what it makes. The **energy output connector** gives out only what is above the reserve, the **heat port** takes the \"Into heat\" share."
+        },
+        {
+          "type": "text",
+          "text": "The \"Tritium\" knob sets the mix of tritium and deuterium. The torus burns best at 50 %, towards the edge of the window the output falls by half. Beyond the window or without condensate the plasma cools for 5 seconds: back in time and it burns on, otherwise it goes out without harm. While \"Start\" is on, a torus that went out ignites again by itself once everything is back. Less tritium means less output, but less tritium spent too. **The Watcher** in the core's slot widens the window to 15–85 % and adds up to 15 % to the output; an unstable one now and then knocks the mix off for 6 seconds."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "K": "voltex_nuclear:torus_core",
+              "L": "voltex_nuclear:torus_coil",
+              "E": "industrial_core:multiblock_energy_port",
+              "X": "voltex_nuclear:energy_output_port",
+              "H": "industrial_core:multiblock_heat_port",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port"
+            },
+            "layers": [
+              [
+                "C.CCC.O",
+                ".CCCCC.",
+                "CCCCCCC",
+                "CCCCCCC",
+                "CCCCCCC",
+                ".CCCCC.",
+                "I.CCC.E"
+              ],
+              [
+                "C.CCC.H",
+                ".CLCLC.",
+                "CLCCCLC",
+                "CCCCCCC",
+                "CLCCCLC",
+                ".CLCLC.",
+                "C.CKC.X"
+              ],
+              [
+                "..CCC..",
+                ".CCCCC.",
+                "CCCCCCC",
+                "CCCCCCC",
+                "CCCCCCC",
+                ".CCCCC.",
+                "..CCC.."
+              ]
+            ],
+            "model": "voltex_nuclear:torus"
+          }
+        },
+        {
+          "type": "tip",
+          "text": "An energy connector with no upgrade holds 1M FE, and the first reserve takes almost a minute. With the best port upgrade it charges in half a second."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Electrolyzer",
+              "to": "electrolyzer"
+            },
+            {
+              "text": "Zone Parts",
+              "to": "reactor_parts"
+            },
+            {
+              "text": "The Watcher",
+              "to": "watcher"
+            },
+            {
+              "text": "Ports",
+              "to": "late_ports"
+            },
+            {
+              "text": "Structure Wand",
+              "to": "late_wand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Forge",
+      "id": "star_forge",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:star_forge_core",
+          "title": "Star Forge",
+          "subtitle": "Multiblock 5×5, 4 high, port stands",
+          "tags": [
+            {
+              "text": "Heat",
+              "color": "#FFD000"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The last machine of the branch. The forge melts **star alloy** out of two **kronium alloys** from Voltex, **palladium** and a **helium cell**; the empty cell comes back. The forge needs no energy, only heat."
+        },
+        {
+          "type": "text",
+          "text": "The forge stands right on the ground: two layers of nuclear casing in a 5×5 circle with the corners cut, a 3×3 over them and one block on top. The **core** stands in the bottom layer in the middle of the front side. In the four empty corners of the square stand the **stands**, two blocks each: any block of them can be a Voltex port, casing takes the rest. The Voltex structure wand lays the casing when you click the core; the ports are yours to place."
+        },
+        {
+          "type": "text",
+          "text": "Heat is the level in the forge's **heat ports**, the hottest one counts. From 8 000 the forge melts, and the hotter, the faster. A Voltex heat pipe holds no more than 4 000, so only a heat port right against a heat port of the torus or the reactor gives that much: put the forge right next to them. If it cools in the middle of a melt, the melt waits and goes on when the heat is back."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            {
+              "key": "Heat threshold",
+              "value": "8 000"
+            },
+            {
+              "key": "Ingot",
+              "value": "30 seconds at 8 000, 15 at 10 000"
+            },
+            {
+              "key": "Melt",
+              "value": "2 kronium alloys, palladium, a helium cell"
+            },
+            {
+              "key": "Output",
+              "value": "star alloy and an empty cell"
+            },
+            {
+              "key": "Energy",
+              "value": "none"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The **input port** takes the alloy, the palladium and the helium; star alloy and empty cells go out through the **output port**."
+        },
+        {
+          "type": "multiblock",
+          "pattern": {
+            "key": {
+              "C": "voltex_nuclear:nuclear_casing",
+              "K": "voltex_nuclear:star_forge_core",
+              "H": "industrial_core:multiblock_heat_port",
+              "I": "industrial_core:multiblock_input_port",
+              "O": "industrial_core:multiblock_output_port"
+            },
+            "layers": [
+              [
+                "CCCCO",
+                "CCCCC",
+                "CCCCC",
+                "CCCCC",
+                "ICKCH"
+              ],
+              [
+                "CCCCC",
+                "CCCCC",
+                "CCCCC",
+                "CCCCC",
+                "CCCCC"
+              ],
+              [
+                ".....",
+                ".CCC.",
+                ".CCC.",
+                ".CCC.",
+                "....."
+              ],
+              [
+                ".....",
+                ".....",
+                "..C..",
+                ".....",
+                "....."
+              ]
+            ],
+            "model": "voltex_nuclear:star_forge"
+          }
+        },
+        {
+          "type": "tip",
+          "text": "The forge's window says why it stands: not hot enough, no heat port, no input or the output full."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Fusion Torus",
+              "to": "torus"
+            },
+            {
+              "text": "Radiochemistry",
+              "to": "radiochem"
+            },
+            {
+              "text": "Ports",
+              "to": "late_ports"
+            },
+            {
+              "text": "Structure Wand",
+              "to": "late_wand"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stellar Suit",
+      "id": "stellar_suit",
+      "elements": [
+        {
+          "type": "card",
+          "icon": "voltex_nuclear:stellar_chestplate",
+          "title": "Stellar Suit",
+          "subtitle": "Power armor over Plasma"
+        },
+        {
+          "type": "text",
+          "text": "The third power suit after Nexite and Plasma. Each piece is put together in the Voltex assembler from the Plasma piece of its slot, star plates and parts of the add-on. Star plates are cast from the star alloy of the star forge."
+        },
+        {
+          "type": "items",
+          "items": [
+            "voltex_nuclear:stellar_helmet",
+            "voltex_nuclear:stellar_chestplate",
+            "voltex_nuclear:stellar_leggings",
+            "voltex_nuclear:stellar_boots"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Like Plasma, the full set flies and turns damage away: each charged piece takes a quarter, at half Plasma's cost. On top of that, while it holds energy the suit heals its hurt wearer, keeps fire and lava off, flies twice as fast in a sprint and stops dead in the air when you let go of the keys."
+        },
+        {
+          "type": "stats",
+          "rows": [
+            {
+              "key": "Energy per piece",
+              "value": "4M FE"
+            },
+            {
+              "key": "Damage",
+              "value": "50 FE per health point"
+            },
+            {
+              "key": "Healing",
+              "value": "half a heart every 2 s, 20 000 FE per health point"
+            },
+            {
+              "key": "Lava",
+              "value": "1 000 FE a tick"
+            },
+            {
+              "key": "Rush",
+              "value": "twice as fast, 2 000 FE a tick"
+            },
+            {
+              "key": "Flight",
+              "value": "500 FE a tick"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The suit charges like Voltex armor. And an **isotope pellet** burns in the chestplate: when the whole suit is under a quarter, the chestplate takes a pellet from your inventory and for an hour feeds 2 000 FE a tick into all four pieces. While they are full, the pellet waits. Its time left shows over the hotbar and in the chestplate's tooltip."
+        },
+        {
+          "type": "tip",
+          "text": "The reactor's irradiation channel makes pellets from isotope blanks, and the pellet press makes the blanks from depleted uranium."
+        },
+        {
+          "type": "links",
+          "label": "See also",
+          "links": [
+            {
+              "text": "Star Forge",
+              "to": "star_forge"
+            },
+            {
+              "text": "Irradiation Channel",
+              "to": "irradiation_channel"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "__comment": "Tritium (DESIGN step 17): the irradiation channel turned a lithium blank into a tritium cell.",
+  "parent": "voltex_nuclear:nuclear/chain_reaction",
+  "display": {
+    "icon": {
+      "id": "voltex_nuclear:tritium_cell"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.tritium.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.tritium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_tritium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:tritium_cell"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tritium"
+    ]
+  ]
+}

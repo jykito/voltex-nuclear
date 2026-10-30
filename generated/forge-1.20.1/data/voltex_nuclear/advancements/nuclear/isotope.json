@@ -1,0 +1,41 @@
+{
+  "__comment": "Isotope (DESIGN step 15): any of the four restructor catalysts out of the irradiation channel.",
+  "parent": "voltex_nuclear:nuclear/tritium",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:carbon_14"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.isotope.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.isotope.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_isotope": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:carbon_14",
+              "voltex_nuclear:gold_198",
+              "voltex_nuclear:americium_241",
+              "voltex_nuclear:sodium_24"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_isotope"
+    ]
+  ]
+}

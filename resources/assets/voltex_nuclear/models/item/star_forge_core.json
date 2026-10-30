@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "voltex_nuclear:block/star_forge_core_front",
+    "side": "voltex_nuclear:block/star_forge_core_side",
+    "top": "voltex_nuclear:block/star_forge_core_top"
+  }
+}

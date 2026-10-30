@@ -1,0 +1,13 @@
+{
+  "__comment": "Pellet press: built on the Voltex compressor (it looks like one with a new face), the advanced motor holds it at the start of era 4 like the centrifuge, three hardened steel rods for the ram, punch and die, one craft of nuclear casing.",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": { "item": "voltex_nuclear:nuclear_casing" },
+    "M": { "item": "industrial_core:electric_motor_advanced" },
+    "H": { "item": "industrial_core:hardened_steel_rod" },
+    "C": { "item": "industrial_core:compressor" }
+  },
+  "pattern": ["NMN", "HCH", "NHN"],
+  "result": { "id": "voltex_nuclear:pellet_press", "count": 1 }
+}

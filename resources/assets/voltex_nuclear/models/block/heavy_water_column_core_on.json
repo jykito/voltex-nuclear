@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "voltex_nuclear:block/heavy_water_column_core_side",
+    "south": "voltex_nuclear:block/heavy_water_column_core_front_on",
+    "north": "voltex_nuclear:block/heavy_water_column_core_side",
+    "east": "voltex_nuclear:block/heavy_water_column_core_side",
+    "west": "voltex_nuclear:block/heavy_water_column_core_side",
+    "up": "voltex_nuclear:block/heavy_water_column_core_top",
+    "down": "voltex_nuclear:block/heavy_water_column_core_top"
+  }
+}

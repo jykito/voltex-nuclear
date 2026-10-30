@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "voltex_nuclear:block/centrifuge_top",
+    "side": "voltex_nuclear:block/centrifuge_side"
+  }
+}

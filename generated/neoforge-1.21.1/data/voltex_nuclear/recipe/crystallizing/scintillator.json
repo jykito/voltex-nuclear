@@ -1,0 +1,16 @@
+{
+  "__comment": "Reactor core part (DESIGN step 22): lithium grown into a scintillator in molten amethyst in the Voltex crystallizer (era 4, liquids and crystals); lithium scintillators are real neutron detectors.",
+  "type": "industrial_core:crystallizer_recipe",
+  "fluidInput": "industrial_core:molten_amethyst",
+  "fluidInputAmount": 288,
+  "ingredient": {
+    "item": "industrial_core:lithium"
+  },
+  "ingredientCount": 2,
+  "result": {
+    "id": "voltex_nuclear:scintillator",
+    "count": 1
+  },
+  "processingTime": 200,
+  "energyCostPerTick": 60
+}

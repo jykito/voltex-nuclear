@@ -1,0 +1,15 @@
+{
+  "__comment": "Palladium foil (stage 11.5): palladium from the radiochemical plant rolled thin.",
+  "type": "industrial_core:machine_recipe",
+  "machine_type": "industrial_core:rolling",
+  "ingredient": {
+    "item": "voltex_nuclear:palladium"
+  },
+  "inputCount": 1,
+  "result": {
+    "id": "voltex_nuclear:palladium_foil",
+    "count": 2
+  },
+  "processingTime": 140,
+  "energyCost": 100
+}

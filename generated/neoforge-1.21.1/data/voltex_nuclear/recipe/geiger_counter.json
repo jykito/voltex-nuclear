@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "key": {
+    "P": {
+      "tag": "c:plates/tin"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "T": {
+      "item": "industrial_core:transistor"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "N": {
+      "item": "minecraft:note_block"
+    }
+  },
+  "pattern": [
+    "PGP",
+    "TRT",
+    "PNP"
+  ],
+  "result": {
+    "id": "voltex_nuclear:geiger_counter",
+    "count": 1
+  }
+}

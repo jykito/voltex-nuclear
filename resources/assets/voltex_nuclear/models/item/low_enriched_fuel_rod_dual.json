@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "voltex_nuclear:item/low_enriched_fuel_rod_dual"
+  }
+}

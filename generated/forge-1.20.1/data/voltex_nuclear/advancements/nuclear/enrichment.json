@@ -1,0 +1,38 @@
+{
+  "__comment": "Enrichment (DESIGN step 3): the first low enriched uranium out of the centrifuge cascade.",
+  "parent": "voltex_nuclear:nuclear/uranium",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:low_enriched_uranium"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.enrichment.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.enrichment.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_low_enriched": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:low_enriched_uranium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_low_enriched"
+    ]
+  ]
+}

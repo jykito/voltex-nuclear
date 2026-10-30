@@ -1,0 +1,33 @@
+Voltex:Nuclear License
+Copyright (c) 2026 jykito. All Rights Reserved.
+
+"Voltex:Nuclear" (the "Mod") is an add-on for the Voltex mod, created by jykito.
+Minecraft is a trademark of Mojang AB / Microsoft. This Mod is not affiliated
+with or endorsed by Mojang or Microsoft, and is distributed free of charge in
+accordance with the Minecraft End User License Agreement and the Minecraft
+Commercial Usage Guidelines.
+
+This license covers the Mod itself (its source code, assets and textures). It
+does NOT cover Minecraft Forge, NeoForge or any other library the Mod depends
+on; those remain under their own licenses.
+
+YOU ARE PERMITTED TO:
+  - Download, install and use the Mod for personal gameplay, free of charge.
+  - Include the Mod in modpacks (public or private), provided the Mod is
+    obtained from its official pages (CurseForge / Modrinth) and the author is
+    credited. A link to the official page is sufficient credit.
+  - Create and share content (videos, screenshots, streams, reviews) that
+    features the Mod.
+
+YOU ARE NOT PERMITTED TO, without prior written permission from the author:
+  - Sell the Mod, charge for access to it, or place it behind any paywall.
+  - Re-upload, mirror or redistribute the Mod's files on any other website,
+    launcher or platform.
+  - Decompile, reverse-engineer, or modify the Mod and redistribute the result.
+  - Reuse the Mod's source code, assets or textures in another project.
+  - Claim the Mod, in whole or in part, as your own work.
+
+All rights not expressly granted above are reserved by the author.
+The Mod is provided "as is", without warranty of any kind, express or implied.
+
+For permissions beyond the scope of this license, contact the author (jykito).

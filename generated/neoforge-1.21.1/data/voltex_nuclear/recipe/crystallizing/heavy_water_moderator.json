@@ -1,0 +1,16 @@
+{
+  "__comment": "Heavy water moderator (DESIGN step 22, the author chose A on 2026-10-28): the reactor's water cell, the Voltex condensator, filled with heavy water in the Voltex crystallizer, as the cryo cell is the condensator with cryolite. Era 6, with the heavy water column. 1000 mB is 100 seconds of a full column.",
+  "type": "industrial_core:crystallizer_recipe",
+  "fluidInput": "voltex_nuclear:heavy_water",
+  "fluidInputAmount": 1000,
+  "ingredient": {
+    "item": "industrial_core:condensator"
+  },
+  "ingredientCount": 1,
+  "result": {
+    "id": "voltex_nuclear:heavy_water_moderator",
+    "count": 1
+  },
+  "processingTime": 200,
+  "energyCostPerTick": 60
+}

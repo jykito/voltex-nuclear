@@ -1,0 +1,56 @@
+{
+  "__comment": "Star forge core (DESIGN step 28, the author chose A \"Heir of the torus\" on 2026-10-29; stage 11.5 made it of the add-on's own parts): a torus coil (four until stage 14, when the coil grew ten times dearer), so the forge grows out of the torus as the torus grew out of the reactor; reflector elements to keep the star's light in, reinforced plates and palladium foil; the Voltex heat network (heat ports, advanced heat exchangers, thermal insulation) for a machine that runs on heat; plasma cores; liquid helium from the torus. In the Voltex assembler, 90 s at 16 000 FE/t.",
+  "type": "industrial_core:assembling",
+  "inputs": [
+    {
+      "item": "voltex_nuclear:torus_coil",
+      "count": 1
+    },
+    {
+      "item": "industrial_core:plasma_core",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:reflector_element",
+      "count": 8
+    },
+    {
+      "item": "voltex_nuclear:reinforced_plate",
+      "count": 16
+    },
+    {
+      "item": "voltex_nuclear:palladium_foil",
+      "count": 16
+    },
+    {
+      "item": "industrial_core:multiblock_heat_port",
+      "count": 4
+    },
+    {
+      "item": "industrial_core:advanced_heat_exchanger",
+      "count": 16
+    },
+    {
+      "item": "industrial_core:thermal_insulation",
+      "count": 32
+    },
+    {
+      "item": "industrial_core:kronium_alloy",
+      "count": 32
+    },
+    {
+      "item": "voltex_nuclear:nuclear_casing",
+      "count": 16
+    }
+  ],
+  "fluid": {
+    "fluid": "voltex_nuclear:liquid_helium",
+    "amount": 4000
+  },
+  "result": {
+    "id": "voltex_nuclear:star_forge_core",
+    "count": 1
+  },
+  "processingTime": 1800,
+  "energyCostPerTick": 16000
+}

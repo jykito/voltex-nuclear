@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "voltex_nuclear:block/expansion_chamber_top",
+    "side": "voltex_nuclear:block/expansion_chamber_side"
+  }
+}

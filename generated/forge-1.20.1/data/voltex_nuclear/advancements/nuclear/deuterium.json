@@ -1,0 +1,38 @@
+{
+  "__comment": "Deuterium (DESIGN step 13): heavy water from the column, split in the electrolyzer.",
+  "parent": "voltex_nuclear:nuclear/chain_reaction",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:deuterium_cell"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.deuterium.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.deuterium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_deuterium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:deuterium_cell"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_deuterium"
+    ]
+  ]
+}

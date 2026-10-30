@@ -1,0 +1,12 @@
+{
+  "geiger_click": {
+    "subtitle": "subtitles.voltex_nuclear.geiger_click",
+    "sounds": [
+      {
+        "name": "minecraft:random/click",
+        "volume": 0.6,
+        "pitch": 1.8
+      }
+    ]
+  }
+}

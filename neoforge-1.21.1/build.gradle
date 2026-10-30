@@ -1,0 +1,119 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+// Mod identity and the Voltex version are shared with the Forge build
+def modProps = new Properties()
+file('../mod.properties').withReader('UTF-8') { modProps.load(it) }
+modProps.each { k, v -> project.ext.set(k, v) }
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = 'VoltexNuclear'
+}
+
+// The file name carries the loader and game version, so the two builds never clash
+tasks.named('jar', Jar).configure {
+    archiveVersion = "${mod_version}-neoforge-${minecraft_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+// Shared code and resources are compiled into this build; this folder holds only what differs on 1.21.1
+sourceSets {
+    main {
+        java {
+            srcDir '../core/src/main/java'
+            srcDir '../common/src/main/java'
+        }
+        resources {
+            srcDir '../resources'
+            srcDir '../generated/neoforge-1.21.1'
+        }
+    }
+}
+// The core tests run once, in the Forge build (Java 17, the lower bound): core is plain Java, the same on both versions
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+
+    // A dedicated server for the checks of stage 15 (gradlew runServer, folder run/ kept out of git), with Voltex loaded
+    runs {
+        server {
+            server()
+            gameDirectory = project.file('run')
+            programArgument '--nogui'
+        }
+    }
+}
+
+dependencies {
+    // Voltex: the release jar (1.21.1 jars already use the dev names); in the game it is installed as a real mod
+    compileOnly files("libs/Voltex-${voltex_version}-neoforge-${minecraft_version}.jar")
+    runtimeOnly files("libs/Voltex-${voltex_version}-neoforge-${minecraft_version}.jar")   // for runServer only
+    // JEI for the recipe categories; the plugin loads only where JEI is installed
+    compileOnly files("libs/jei-${minecraft_version}-neoforge-${jei_version_neoforge}.jar")
+    // Jade for the reactor tooltip; the plugin loads only where Jade is installed (the jar from a test instance, not bundled)
+    compileOnly files("libs/jade-15.10.6+neoforge.jar")
+    // KubeJS for a pack's reactor parts; the plugin loads only where KubeJS is installed (kubejs.plugins.txt)
+    compileOnly files("libs/kubejs-neoforge-${kubejs_version_neoforge}.jar")
+    compileOnly files("libs/rhino-${rhino_version_neoforge}.jar")
+}
+
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description,
+            voltex_version_range   : voltex_version_range,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

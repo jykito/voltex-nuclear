@@ -1,0 +1,52 @@
+{
+  "__comment": "Torus coil (DESIGN steps 20 and 22, the author chose A on 2026-10-28; raised in stage 14.2, the author chose C on 2026-10-29): the Voltex superconducting solenoid in late amounts, wired cold with the cryo wiring of the add-on, held by singularity cores and a stellar matrix, so that eight coils and the core cost about a third of ten Dyson panels. In the Voltex assembler with the superfluid condensate that keeps it cold: 30 s at 16 000 FE/t.",
+  "type": "industrial_core:assembling",
+  "inputs": [
+    {
+      "item": "industrial_core:superconducting_winding",
+      "count": 16
+    },
+    {
+      "item": "industrial_core:superconducting_wire",
+      "count": 64
+    },
+    {
+      "item": "voltex_nuclear:cryo_wiring",
+      "count": 16
+    },
+    {
+      "item": "industrial_core:singularity_core",
+      "count": 3
+    },
+    {
+      "item": "industrial_core:stellar_matrix",
+      "count": 1
+    },
+    {
+      "item": "industrial_core:kronium_alloy",
+      "count": 16
+    },
+    {
+      "item": "voltex_nuclear:reinforced_plate",
+      "count": 16
+    },
+    {
+      "item": "industrial_core:cryogenic_heat_exchanger",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:nuclear_casing",
+      "count": 4
+    }
+  ],
+  "fluid": {
+    "fluid": "industrial_core:superfluid_condensate",
+    "amount": 1000
+  },
+  "result": {
+    "item": "voltex_nuclear:torus_coil",
+    "count": 1
+  },
+  "processingTime": 600,
+  "energyCostPerTick": 16000
+}

@@ -1,0 +1,18 @@
+{
+  "__comment": "Reactor core part (DESIGN step 22): the pressure vessel is forged in the Voltex blast furnace at the heat of hardened steel, lined with lead.",
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": {
+    "item": "industrial_core:hardened_steel_ingot"
+  },
+  "ingredientCount": 8,
+  "fuel": {
+    "tag": "forge:plates/lead"
+  },
+  "fuelCount": 4,
+  "result": {
+    "item": "voltex_nuclear:pressure_vessel",
+    "count": 1
+  },
+  "processingTime": 600,
+  "requiredHeat": 2400
+}

@@ -1,0 +1,16 @@
+{
+  "__comment": "Star plate (stage 11.5; one ingot of melt since stage 14.2, the author chose B on 2026-10-29): the reinforced plate cast over with star melt.",
+  "type": "industrial_core:crystallizer_recipe",
+  "fluidInput": "voltex_nuclear:star_melt",
+  "fluidInputAmount": 144,
+  "ingredient": {
+    "item": "voltex_nuclear:reinforced_plate"
+  },
+  "ingredientCount": 1,
+  "result": {
+    "item": "voltex_nuclear:star_plate",
+    "count": 1
+  },
+  "processingTime": 300,
+  "energyCostPerTick": 400
+}

@@ -1,0 +1,11 @@
+{
+  "__comment": "MOX fuel (DESIGN step 13, the author chose 3B on 2026-10-27): plutonium from the radiochemical plant and two depleted uranium sintered at the heat of hardened steel, as real MOX pellets are. The pellet press loads it into an empty rod.",
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": { "item": "voltex_nuclear:depleted_uranium" },
+  "ingredientCount": 2,
+  "fuel": { "item": "voltex_nuclear:plutonium" },
+  "fuelCount": 1,
+  "result": { "id": "voltex_nuclear:mox_fuel", "count": 1 },
+  "processingTime": 400,
+  "requiredHeat": 2400
+}

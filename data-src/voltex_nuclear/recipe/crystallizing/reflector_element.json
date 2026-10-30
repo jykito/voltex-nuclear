@@ -1,0 +1,16 @@
+{
+  "__comment": "Reflector element (stage 11.5): beryllium grown in the Voltex photonic melt, a mirror.",
+  "type": "industrial_core:crystallizer_recipe",
+  "fluidInput": "industrial_core:photonic_melt",
+  "fluidInputAmount": 250,
+  "ingredient": {
+    "item": "voltex_nuclear:beryllium_ingot"
+  },
+  "ingredientCount": 1,
+  "result": {
+    "id": "voltex_nuclear:reflector_element",
+    "count": 1
+  },
+  "processingTime": 200,
+  "energyCostPerTick": 200
+}

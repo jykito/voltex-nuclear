@@ -1,0 +1,38 @@
+{
+  "__comment": "Palladium (DESIGN step 21): out of spent rods in the radiochemical plant, as in real spent fuel.",
+  "parent": "voltex_nuclear:nuclear/chain_reaction",
+  "display": {
+    "icon": {
+      "id": "voltex_nuclear:palladium"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.palladium.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.palladium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_palladium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voltex_nuclear:palladium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_palladium"
+    ]
+  ]
+}

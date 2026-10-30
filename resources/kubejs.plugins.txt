@@ -1,0 +1,1 @@
+com.jykito.voltexnuclear.compat.kubejs.NuclearKubeJSPlugin voltex_nuclear

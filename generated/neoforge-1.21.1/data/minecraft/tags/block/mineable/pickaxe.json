@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "voltex_nuclear:uranium_ore",
+    "voltex_nuclear:deepslate_uranium_ore",
+    "voltex_nuclear:raw_uranium_block",
+    "voltex_nuclear:nuclear_casing",
+    "voltex_nuclear:centrifuge",
+    "voltex_nuclear:cascade_core",
+    "voltex_nuclear:pellet_press",
+    "voltex_nuclear:electrolyzer",
+    "voltex_nuclear:reactor_core",
+    "voltex_nuclear:reactor_frame",
+    "voltex_nuclear:expansion_chamber",
+    "voltex_nuclear:energy_output_port",
+    "voltex_nuclear:radiochem_core",
+    "voltex_nuclear:hot_cell_glass",
+    "voltex_nuclear:heavy_water_column_core",
+    "voltex_nuclear:torus_core",
+    "voltex_nuclear:torus_frame",
+    "voltex_nuclear:torus_coil",
+    "voltex_nuclear:star_forge_core",
+    "voltex_nuclear:star_forge_frame"
+  ]
+}

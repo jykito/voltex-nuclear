@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "voltex_nuclear:nuclear_casing"
+    },
+    "L": {
+      "item": "industrial_core:logic_board"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "M": {
+      "item": "industrial_core:machine_casing"
+    }
+  },
+  "pattern": [
+    "ALA",
+    "QMQ",
+    "ALA"
+  ],
+  "result": {
+    "id": "voltex_nuclear:cascade_core",
+    "count": 1
+  }
+}

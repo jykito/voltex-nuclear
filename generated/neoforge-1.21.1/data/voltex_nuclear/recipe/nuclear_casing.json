@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "L": {
+      "tag": "c:plates/lead"
+    },
+    "A": {
+      "item": "industrial_core:hardened_steel_ingot"
+    },
+    "C": {
+      "item": "industrial_core:machine_casing"
+    }
+  },
+  "pattern": [
+    "LAL",
+    "ACA",
+    "LAL"
+  ],
+  "result": {
+    "id": "voltex_nuclear:nuclear_casing",
+    "count": 4
+  }
+}

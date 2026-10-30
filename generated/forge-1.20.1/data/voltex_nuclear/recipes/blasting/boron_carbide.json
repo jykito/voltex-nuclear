@@ -1,0 +1,18 @@
+{
+  "__comment": "Boron carbide (DESIGN step 22, the author chose variant C for the zone parts): four boron and carbon at the heat of hardened steel, as the real absorber material is made. It goes into the control rod (pellet press) and the boron absorber.",
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": {
+    "tag": "forge:dusts/boron"
+  },
+  "ingredientCount": 4,
+  "fuel": {
+    "tag": "forge:dusts/coal"
+  },
+  "fuelCount": 1,
+  "result": {
+    "item": "voltex_nuclear:boron_carbide",
+    "count": 1
+  },
+  "processingTime": 400,
+  "requiredHeat": 2400
+}

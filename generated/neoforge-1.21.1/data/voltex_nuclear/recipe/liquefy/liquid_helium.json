@@ -1,0 +1,13 @@
+{
+  "__comment": "Liquid helium (stage 11.5): a helium cell from the torus in the liquefier; the cell goes with it, the liquefier gives only the fluid.",
+  "type": "industrial_core:liquefier_recipe",
+  "ingredient": {
+    "item": "voltex_nuclear:helium_cell"
+  },
+  "itemCount": 1,
+  "requiredHeat": 1000,
+  "fluid": "voltex_nuclear:liquid_helium",
+  "fluidAmount": 1000,
+  "processingTime": 100,
+  "energyCostPerTick": 80
+}

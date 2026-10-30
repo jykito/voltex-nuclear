@@ -1,0 +1,14 @@
+{
+  "__comment": "Electrolyzer (DESIGN step 13, the author chose A on 2026-10-28): built on the Voltex capsule filler (it fills a container with a fluid, the electrolyzer fills a cell with a gas), two nickel electrodes as in real alkaline electrolyzers, the heavy water valve above, a Voltex control unit below that holds it at era 6 with the column, nuclear casing in the corners as on the pellet press.",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": { "item": "voltex_nuclear:nuclear_casing" },
+    "V": { "item": "industrial_core:fluid_valve" },
+    "I": { "item": "industrial_core:nickel_ingot" },
+    "C": { "item": "industrial_core:capsule_filler" },
+    "U": { "item": "industrial_core:control_unit" }
+  },
+  "pattern": ["NVN", "ICI", "NUN"],
+  "result": { "id": "voltex_nuclear:electrolyzer", "count": 1 }
+}

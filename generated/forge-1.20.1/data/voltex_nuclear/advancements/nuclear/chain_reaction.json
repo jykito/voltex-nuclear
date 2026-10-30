@@ -1,0 +1,32 @@
+{
+  "__comment": "Chain reaction (DESIGN step 4): a fission reactor running with power; the core credits the players within 16 blocks.",
+  "parent": "voltex_nuclear:nuclear/enrichment",
+  "display": {
+    "icon": {
+      "item": "voltex_nuclear:reactor_core"
+    },
+    "title": {
+      "translate": "advancements.voltex_nuclear.chain_reaction.title"
+    },
+    "description": {
+      "translate": "advancements.voltex_nuclear.chain_reaction.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reactor_running": {
+      "trigger": "industrial_core:event",
+      "conditions": {
+        "event": "voltex_nuclear:reactor_running"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "reactor_running"
+    ]
+  ]
+}

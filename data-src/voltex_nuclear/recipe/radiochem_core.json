@@ -1,0 +1,34 @@
+{
+  "__comment": "Radiochemical plant core (DESIGN step 13, the author chose A on 2026-10-27): the window and a microcontroller above, the valves of the solvent tanks at the sides of a Voltex servo drive (the master-slave manipulator of the hot cell, era 5), the add-on casing below with a boron absorber in the middle, the hot cell's shield from the neutrons of the spent rods (the author on 2026-10-30).",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "voltex_nuclear:hot_cell_glass"
+    },
+    "K": {
+      "item": "industrial_core:microcontroller"
+    },
+    "V": {
+      "item": "industrial_core:fluid_valve"
+    },
+    "S": {
+      "item": "industrial_core:servo_drive"
+    },
+    "N": {
+      "item": "voltex_nuclear:nuclear_casing"
+    },
+    "A": {
+      "item": "voltex_nuclear:boron_absorber"
+    }
+  },
+  "pattern": [
+    "GKG",
+    "VSV",
+    "NAN"
+  ],
+  "result": {
+    "id": "voltex_nuclear:radiochem_core",
+    "count": 1
+  }
+}

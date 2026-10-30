@@ -1,0 +1,18 @@
+{
+  "__comment": "Boron alloy (stage 11.5): depleted uranium with boron, the reinforced plate's ingot; the author: make it in the blast furnace, then roll it into the plate.",
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": {
+    "item": "voltex_nuclear:depleted_uranium"
+  },
+  "ingredientCount": 2,
+  "fuel": {
+    "item": "voltex_nuclear:boron"
+  },
+  "fuelCount": 1,
+  "result": {
+    "item": "voltex_nuclear:boron_alloy",
+    "count": 2
+  },
+  "processingTime": 300,
+  "requiredHeat": 2000
+}

@@ -1,0 +1,13 @@
+{
+  "__comment": "Star melt (stage 11.5): the star alloy melted, as hot as the star forge melts it.",
+  "type": "industrial_core:liquefier_recipe",
+  "ingredient": {
+    "item": "voltex_nuclear:star_alloy"
+  },
+  "itemCount": 1,
+  "requiredHeat": 8000,
+  "fluid": "voltex_nuclear:star_melt",
+  "fluidAmount": 144,
+  "processingTime": 200,
+  "energyCostPerTick": 400
+}

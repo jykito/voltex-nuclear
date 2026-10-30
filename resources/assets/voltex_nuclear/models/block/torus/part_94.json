@@ -1,0 +1,1 @@
+{"ambientocclusion":false,"textures":{"particle":"voltex_nuclear:block/nuclear_casing","atlas":"voltex_nuclear:block/torus_atlas"},"elements":[{"from":[6.4,0,0],"to":[16,1.6,16],"faces":{"west":{"uv":[3.8182,9,4.8068,9.1042],"texture":"#atlas"},"up":{"uv":[13.625,4.6932,14.225,5.6818],"texture":"#atlas"}}}]}

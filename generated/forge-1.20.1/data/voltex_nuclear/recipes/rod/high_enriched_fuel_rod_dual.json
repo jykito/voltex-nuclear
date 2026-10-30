@@ -1,0 +1,18 @@
+{
+  "__comment": "Fuel rod assembly in the Voltex rod fabricator (era 5): rods held by invar plates, which barely grow with heat. Time and energy follow the steps of the Voltex cryo rods.",
+  "type": "industrial_core:rod_fabrication_recipe",
+  "result": {
+    "item": "voltex_nuclear:high_enriched_fuel_rod_dual",
+    "count": 1
+  },
+  "ingredient1": {
+    "item": "voltex_nuclear:high_enriched_fuel_rod"
+  },
+  "ingredient2": {
+    "tag": "forge:plates/invar"
+  },
+  "count1": 2,
+  "count2": 1,
+  "processingTime": 200,
+  "energyCostPerTick": 400
+}

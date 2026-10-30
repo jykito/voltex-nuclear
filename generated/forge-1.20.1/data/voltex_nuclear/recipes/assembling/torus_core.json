@@ -1,0 +1,56 @@
+{
+  "__comment": "Fusion torus core (DESIGN step 22, the author chose B \"Heir of the reactor\" on 2026-10-28): the fission reactor core with four expansion chambers and their control rod drives at the base, so the torus grows out of the reactor; Voltex era 7 parts in late core amounts; heavy water, its second consumer after the electrolyzer. In the Voltex assembler, as his late cores: 60 s at 16 000 FE/t.",
+  "type": "industrial_core:assembling",
+  "inputs": [
+    {
+      "item": "voltex_nuclear:reactor_core",
+      "count": 1
+    },
+    {
+      "item": "voltex_nuclear:expansion_chamber",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:control_rod_drive",
+      "count": 4
+    },
+    {
+      "item": "voltex_nuclear:neutron_detector",
+      "count": 4
+    },
+    {
+      "item": "industrial_core:superconducting_winding",
+      "count": 4
+    },
+    {
+      "item": "industrial_core:quantum_capacitor",
+      "count": 8
+    },
+    {
+      "item": "industrial_core:control_unit",
+      "count": 4
+    },
+    {
+      "item": "industrial_core:mechanism_block",
+      "count": 8
+    },
+    {
+      "item": "industrial_core:armor_sheet",
+      "count": 32
+    },
+    {
+      "item": "industrial_core:kronium_alloy",
+      "count": 16
+    }
+  ],
+  "fluid": {
+    "fluid": "voltex_nuclear:heavy_water",
+    "amount": 4000
+  },
+  "result": {
+    "item": "voltex_nuclear:torus_core",
+    "count": 1
+  },
+  "processingTime": 1200,
+  "energyCostPerTick": 16000
+}

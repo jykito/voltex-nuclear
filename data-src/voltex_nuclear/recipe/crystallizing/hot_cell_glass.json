@@ -1,0 +1,16 @@
+{
+  "__comment": "Hot cell glass (DESIGN step 13, the author chose A for the plant's recipes on 2026-10-27): glass cast with molten lead in the Voltex crystallizer, as the windows of real hot cells are lead glass. Molten lead has another use before era 7.",
+  "type": "industrial_core:crystallizer_recipe",
+  "fluidInput": "industrial_core:molten_lead",
+  "fluidInputAmount": 144,
+  "ingredient": {
+    "item": "minecraft:glass"
+  },
+  "ingredientCount": 2,
+  "result": {
+    "id": "voltex_nuclear:hot_cell_glass",
+    "count": 2
+  },
+  "processingTime": 200,
+  "energyCostPerTick": 60
+}

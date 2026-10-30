@@ -1,0 +1,1 @@
+{"ambientocclusion":false,"textures":{"particle":"voltex_nuclear:block/nuclear_casing","atlas":"voltex_nuclear:block/reactor_atlas"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"down":{"uv":[11.1369,6.121,12.129,7.1131],"texture":"#atlas"}}}]}

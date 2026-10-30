@@ -1,0 +1,11 @@
+{
+  "__comment": "Beryllium (DESIGN step 6): emerald is the mineral beryl, so Voltex emerald dust gives beryllium in the Voltex blast furnace, coal dust as the second input. Era 3.",
+  "type": "industrial_core:blast_furnace_recipe",
+  "ingredient": { "tag": "c:dusts/emerald" },
+  "ingredientCount": 1,
+  "fuel": { "tag": "c:dusts/coal" },
+  "fuelCount": 1,
+  "result": { "id": "voltex_nuclear:beryllium_ingot", "count": 1 },
+  "processingTime": 300,
+  "requiredHeat": 1600
+}

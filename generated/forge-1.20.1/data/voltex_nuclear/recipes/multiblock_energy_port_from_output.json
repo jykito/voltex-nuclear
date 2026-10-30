@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "voltex_nuclear:energy_output_port"
+    }
+  ],
+  "result": {
+    "item": "industrial_core:multiblock_energy_port",
+    "count": 1
+  }
+}

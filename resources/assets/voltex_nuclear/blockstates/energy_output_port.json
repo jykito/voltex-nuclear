@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "dark=false": {
+      "model": "voltex_nuclear:block/energy_output_port"
+    },
+    "dark=true": {
+      "model": "voltex_nuclear:block/energy_output_port_dark"
+    }
+  }
+}

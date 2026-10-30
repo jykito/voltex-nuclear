@@ -1,0 +1,15 @@
+{
+  "__comment": "Cryogenic wiring (stage 11.5): a Voltex superconducting strand kept at the third stage of cold.",
+  "type": "industrial_core:cryo_recipe",
+  "ingredient": {
+    "item": "industrial_core:superconducting_strand"
+  },
+  "ingredientCount": 1,
+  "requiredStage": 3,
+  "result": {
+    "item": "voltex_nuclear:cryo_wiring",
+    "count": 2
+  },
+  "processingTime": 400,
+  "energyCostPerTick": 200
+}

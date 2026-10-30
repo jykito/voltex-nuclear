@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "voltex_nuclear:item/tritium_cell"
+  }
+}
