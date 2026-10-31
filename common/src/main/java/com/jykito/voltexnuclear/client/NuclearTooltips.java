@@ -1,6 +1,7 @@
 package com.jykito.voltexnuclear.client;
 
 import com.jykito.voltexnuclear.content.NuclearItems;
+import com.jykito.voltexnuclear.core.ModInfo;
 import com.jykito.voltexnuclear.core.reactor.Cooling;
 import com.jykito.voltexnuclear.core.reactor.Fission;
 import com.jykito.voltexnuclear.core.reactor.Part;
@@ -27,9 +28,12 @@ public final class NuclearTooltips {
         }
         Part part = ReactorParts.of(stack);
         if (part == null) return;
+        // the add-on's own reactor parts point to the guide: how the zone works is a chapter, not a tooltip
+        boolean own = stack.getDescriptionId().startsWith("item." + ModInfo.MOD_ID + ".");
         if (part.isFuel()) {
             int minutes = (int) Math.ceil((part.life() - ReactorParts.wear(stack)) / TICKS_PER_MINUTE);
             lines.add(Component.translatable("tooltip.voltex_nuclear.rod_left", Math.max(0, minutes)).withStyle(ChatFormatting.GRAY));
+            if (own) lines.add(Component.translatable("tooltip.voltex_nuclear.see_guide").withStyle(ChatFormatting.DARK_GRAY));
             return;
         }
         if (ReactorParts.fromPack(stack.getItem())) {   // a pack's part has no line of its own in the lang files
@@ -48,6 +52,12 @@ public final class NuclearTooltips {
             default -> null;   // the Voltex parts
         };
         if (args != null) lines.add(Component.translatable(stack.getDescriptionId() + ".tooltip", args).withStyle(ChatFormatting.GRAY));
+        // the two things a cryo cell needs that its numbers do not say: rods beside it, and room for the hot coolant
+        if (part.kind() == Part.Kind.CRYO_CELL) {
+            lines.add(Component.translatable("tooltip.voltex_nuclear.outlet_near").withStyle(ChatFormatting.GRAY));
+            lines.add(Component.translatable("item.voltex_nuclear.cryo_cell.tooltip_out").withStyle(ChatFormatting.GRAY));
+        }
+        if (own) lines.add(Component.translatable("tooltip.voltex_nuclear.see_guide").withStyle(ChatFormatting.DARK_GRAY));
     }
 
     private static int percent(double share) {

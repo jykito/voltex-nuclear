@@ -131,6 +131,16 @@ class ReactorTest {
     }
 
     @Test
+    void aCryoCellWithoutCoolantIsGivenHeatButTakesNone() {
+        Reactor r = running(".......", ".......", ".......", "...UK..");
+        r.tick(PLENTY, 0);
+        assertEquals(117.6, r.load(3, 4), E);   // the rod still shares its heat with it
+        assertEquals(0, r.took(3, 4), E);       // the window shows this cell short of coolant
+        r.tick(PLENTY, PLENTY);
+        assertEquals(117.6, r.took(3, 4), E);
+    }
+
+    @Test
     void aFullHullScramsTheReactorAndResetCoolsIt() {
         // a lone quad high enriched rod heats the hull by 117.6 - 20 a tick: SCRAM on tick 205
         Reactor r = running(".......", ".......", ".......", "...U...");

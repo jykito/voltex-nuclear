@@ -410,6 +410,16 @@
           "text": "The heat of a rod is split evenly among the **outlets** next to it: heat vents, condensators and cryo cells. A Voltex **heat exchanger** takes no heat itself; it passes heat along a chain of exchangers to the outlets next to any of them."
         },
         {
+          "type": "image",
+          "texture": "voltex_nuclear:textures/gui/guide/reactor_cooling.png",
+          "w": 184,
+          "h": 112
+        },
+        {
+          "type": "text",
+          "text": "Only the four sides count. Here the rod gives its heat to the four cryo cells around it, while the cell on the diagonal and the one off to the side get no heat and use no coolant."
+        },
+        {
           "type": "text",
           "text": "Heat with nowhere to go, and what an outlet cannot take in time, goes into the **hull**. The hull cools a little by itself, and when it overheats, SCRAM fires."
         },
@@ -433,7 +443,11 @@
         },
         {
           "type": "text",
-          "text": "The reactor takes water and coolant from the input ports. The water boils away. A cryo cell gives the same amount of hot coolant to the output port and works only while there is room for it there. So switch the output port to the mode \"Fluid\" or \"Items + fluid\". Under a condensator and a cryo cell the window shows a bar of how loaded the cell is."
+          "text": "The reactor takes water and coolant from the input ports. The water boils away. A cryo cell gives the same amount of hot coolant to the output port and works only while there is room for it there. So switch the output port to the mode \"Fluid\" or \"Items + fluid\". Under a condensator and a cryo cell the window shows a bar of the heat the cell takes. A red part means the cell lacks its fluid or room at the output; hover the cell and the window tells you which."
+        },
+        {
+          "type": "tip",
+          "text": "Cryo cells take no heat and the coolant does not go down? It is nearly always the output port: it has to be in the \"Fluid\" mode, and something has to take the hot coolant away from it."
         },
         {
           "type": "tip",

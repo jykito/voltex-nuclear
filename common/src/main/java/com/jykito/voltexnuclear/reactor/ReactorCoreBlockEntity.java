@@ -166,6 +166,8 @@ public class ReactorCoreBlockEntity extends BlockEntity implements MenuProvider,
     public int clientFe, clientHull;
     public long clientScramAt = Long.MIN_VALUE / 2;
     private double lastPower, lastFe, lastWater, lastCoolant, lastZoneHeat, lastRemoved, lastToHull;
+    /** Why cells lacked their fluid on the last tick, {@link #SHORT_WATER} and the others; for the window. */
+    private int shortBits;
     private int lastHeat, lastLost, given;
     /** What the Watcher did on the last tick, for the window: none in the slot, watching, or easing the power off. */
     private WatcherState watcherState = WatcherState.NONE;
@@ -224,13 +226,17 @@ public class ReactorCoreBlockEntity extends BlockEntity implements MenuProvider,
         // as much as the output tanks take back
         Map<String, Double> supply = new HashMap<>();
         Map<String, Fluid> back = new HashMap<>();
+        shortBits = 0;
         for (Cooling k : reactor.drinking()) {
             Fluid in = fluid(k.fluid()), out = k.output() == null ? null : fluid(k.output());
             if (in == null) continue;
             int have = VoltexPorts.fluid(inputs, in);
+            boolean water = Cooling.WATER.equals(k.fluid()), coolant = Cooling.COOLANT.equals(k.fluid());
+            if (have <= 0) shortBits |= water ? SHORT_WATER : coolant ? SHORT_COOLANT : SHORT_PACK_FLUID;
             if (out != null) {
                 int room = 0;
                 for (ItemFluidPortBlockEntity port : outputs) room += platform.fillPort(port, out, HOT_ROOM_ASK, true);
+                if (room <= 0 && have > 0) shortBits |= coolant ? SHORT_HOT_ROOM : SHORT_PACK_ROOM;
                 have = Math.min(have, room);
                 back.putIfAbsent(k.fluid(), out);
             }
@@ -802,18 +808,25 @@ public class ReactorCoreBlockEntity extends BlockEntity implements MenuProvider,
      * Indices of the numbers the window gets; the client gets 16 bits a cell, so big numbers go in two. Power and hull in
      * thousandths, water and coolant in hundredths of a mB a tick, the chambers as bits (L, R, T, B); the heat the zone
      * gives, the heat its outlets take and the heat that goes into the hull a tick (D_HEAT is the heat sent into the pipes);
-     * a ghost as its place in {@link ReactorParts#items} plus one, a load as the heat an outlet was given on the last tick.
+     * a ghost as its place in {@link ReactorParts#items} plus one, a load as the heat an outlet was given on the last tick,
+     * a took as what it took of it; D_SHORT the bits of {@link #SHORT_WATER} and the others: why cells lacked their fluid.
      */
     public static final int D_STATUS = 0, D_KNOB = 1, D_SPLIT = 2, D_POWER = 3, D_HULL = 4, D_CHAMBERS = 5, D_FE = 6, D_HEAT = 8,
             D_ENERGY = 10, D_GIVEN = 12, D_LOST = 14, D_WATER = 16, D_COOLANT = 17, D_ZONE_HEAT = 18, D_REMOVED = 19, D_TO_HULL = 20,
-            D_GHOST = 21, D_LOAD = D_GHOST + CELLS, D_WATCHER = D_LOAD + CELLS, D_COUNT = D_WATCHER + 1;
+            D_GHOST = 21, D_LOAD = D_GHOST + CELLS, D_WATCHER = D_LOAD + CELLS, D_TOOK = D_WATCHER + 1, D_SHORT = D_TOOK + CELLS,
+            D_COUNT = D_SHORT + 1;
+
+    /** Why cells lacked their fluid on the last tick: none in the input ports, or (for the hot coolant) no room in the output ports. */
+    public static final int SHORT_WATER = 1, SHORT_COOLANT = 2, SHORT_HOT_ROOM = 4, SHORT_PACK_FLUID = 8, SHORT_PACK_ROOM = 16;
 
     private final ContainerData data = new ContainerData() {
         @Override
         public int get(int i) {
             if (i >= D_GHOST && i < D_LOAD) return ReactorParts.index(ghosts[i - D_GHOST]) + 1;
             if (i >= D_LOAD && i < D_WATCHER) return (int) Math.min(Short.MAX_VALUE, Math.round(reactor.load(row(i - D_LOAD), col(i - D_LOAD))));
+            if (i >= D_TOOK && i < D_SHORT) return (int) Math.min(Short.MAX_VALUE, Math.round(reactor.took(row(i - D_TOOK), col(i - D_TOOK))));
             return switch (i) {
+                case D_SHORT -> shortBits;
                 case D_WATCHER -> watcherState.ordinal();
                 case D_STATUS -> status.ordinal();
                 case D_KNOB -> knob;

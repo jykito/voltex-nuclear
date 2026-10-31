@@ -65,8 +65,8 @@ public final class Reactor {
     private final List<List<Cell>> groupOutlets = new ArrayList<>();
 
     private final double[][] wear = new double[Zone.SIZE][Zone.SIZE], channel = new double[Zone.SIZE][Zone.SIZE];
-    /** The heat each outlet was given on the last tick, for the window. */
-    private double[][] lastLoad = new double[Zone.SIZE][Zone.SIZE];
+    /** The heat each outlet was given on the last tick, and what it took of it, for the window. */
+    private double[][] lastLoad = new double[Zone.SIZE][Zone.SIZE], lastTook = new double[Zone.SIZE][Zone.SIZE];
     private double hull, knob = 1;
     private boolean running, scram, held;
 
@@ -202,6 +202,14 @@ public final class Reactor {
         return lastLoad[row][col];
     }
 
+    /**
+     * The heat an outlet took away on the last tick: its load, or less when it is at its rate or a cell lacks its fluid
+     * (the rest went into the hull). The window tells a cell short of fluid by this falling under the load.
+     */
+    public double took(int row, int col) {
+        return lastTook[row][col];
+    }
+
     // ---- channel blanks and what the cells hold
 
     /** Irradiation a channel blank has gathered, the flux it saw times the power, summed over ticks. */
@@ -258,6 +266,7 @@ public final class Reactor {
         // what the cells used is summed up, not taken as "given minus left": the tests give an endless supply
         double removed = 0;
         Map<String, Double> used = new HashMap<>();
+        double[][] tookAt = new double[Zone.SIZE][Zone.SIZE];
         for (int r = 0; r < Zone.SIZE; r++)
             for (int c = 0; c < Zone.SIZE; c++) {
                 double h = load[r][c];
@@ -267,11 +276,13 @@ public final class Reactor {
                 if (k.drinks()) room = Math.min(room, Math.max(0, fluids.getOrDefault(k.fluid(), 0.0) - used.getOrDefault(k.fluid(), 0.0)) * k.heatPerMb());
                 double took = Math.min(h, room);
                 if (k.drinks() && took > 0) used.merge(k.fluid(), took / k.heatPerMb(), Double::sum);
+                tookAt[r][c] = took;
                 removed += took;
                 toHull += h - took;
             }
 
         lastLoad = load;
+        lastTook = tookAt;
         hull = Math.max(0, hull + toHull - Fission.HULL_COOLING);
         if (hull >= Fission.HULL_CAPACITY) scram = true;
 

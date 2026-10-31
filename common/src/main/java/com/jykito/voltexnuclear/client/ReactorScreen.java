@@ -2,6 +2,7 @@ package com.jykito.voltexnuclear.client;
 
 import com.jykito.industrialcore.ModStyle;
 import com.jykito.voltexnuclear.VoltexNuclear;
+import com.jykito.voltexnuclear.core.reactor.Cooling;
 import com.jykito.voltexnuclear.core.reactor.FluxMap;
 import com.jykito.voltexnuclear.core.reactor.Part;
 import com.jykito.voltexnuclear.core.reactor.Zone;
@@ -133,9 +134,12 @@ public class ReactorScreen extends AbstractContainerScreen<ReactorMenu> {
             ItemStack stack = menu.getSlot(i).getItem();
             Part part = ReactorParts.of(stack);
             if (part != null && part.cooling() != null && part.cooling().drinks()) {
+                // what the cell took in its color; what it was given and could not take for want of its fluid, red
                 double rate = part.cooling().rate();
+                int tw = (int) Math.round(16 * Math.min(1, menu.get(D_TOOK + i) / rate)), lw = (int) Math.round(16 * Math.min(1, load / rate));
                 fill(g, cx, cy + 15, 16, 1, 0xFF111111);
-                fill(g, cx, cy + 15, (int) Math.round(16 * Math.min(1, load / rate)), 1, part.kind() == Part.Kind.WATER_CELL ? 0xFF5AA7E8 : 0xFF7FD8F0);
+                fill(g, cx, cy + 15, tw, 1, part.kind() == Part.Kind.WATER_CELL ? 0xFF5AA7E8 : 0xFF7FD8F0);
+                if (starved(part, i) && lw > tw) fill(g, cx + tw, cy + 15, lw - tw, 1, C_BAD);
             }
             int ghost = menu.get(D_GHOST + i);
             if (!stack.isEmpty() && otherThanGhost(stack, ghost)) {   // a scheme wants another part here
@@ -285,12 +289,39 @@ public class ReactorScreen extends AbstractContainerScreen<ReactorMenu> {
             lines.add(Component.translatable("gui.voltex_nuclear.reactor.cell_flux", decimal(flux.flux(r, c), 2)).withStyle(s -> s.withColor(C_ENERGY)));
             int load = menu.get(D_LOAD + i);
             if (load > 0) lines.add(Component.translatable("gui.voltex_nuclear.reactor.cell_heat", load).withStyle(s -> s.withColor(C_HEAT)));
+            Part part = ReactorParts.of(stack);
+            if (starved(part, i)) {
+                lines.add(Component.translatable("gui.voltex_nuclear.reactor.cell_took", menu.get(D_TOOK + i)).withStyle(s -> s.withColor(C_BAD)));
+                String why = shortReason(part);
+                if (why != null) lines.add(Component.translatable(why).withStyle(s -> s.withColor(C_BAD)));
+            }
             int ghost = menu.get(D_GHOST + i);
             if (otherThanGhost(stack, ghost))
                 lines.add(Component.translatable("gui.voltex_nuclear.reactor.ghost_other", new ItemStack(ReactorParts.items().get(ghost - 1)).getHoverName())
                         .withStyle(s -> s.withColor(C_BAD)));
         }
         return lines;
+    }
+
+    /** Whether a cell that drinks was given heat it could not take for want of its fluid (not because it is at its rate). */
+    private boolean starved(Part part, int i) {
+        if (part == null || part.cooling() == null || !part.cooling().drinks()) return false;
+        int load = menu.get(D_LOAD + i), took = menu.get(D_TOOK + i);
+        return load > took && took < part.cooling().rate() - 1;
+    }
+
+    /** Why cells stand, by the bit of the core: SHORT_WATER is bit 0, then SHORT_COOLANT, SHORT_HOT_ROOM, the pack's two. */
+    private static final String[] SHORT_KEYS = {"gui.voltex_nuclear.reactor.short_water", "gui.voltex_nuclear.reactor.short_coolant",
+            "gui.voltex_nuclear.reactor.short_hot_room", "gui.voltex_nuclear.reactor.short_pack_fluid", "gui.voltex_nuclear.reactor.short_pack_room"};
+
+    /** The lang key of why a cell of this part lacked its fluid, from the bits the core sends; null when none of its bits is set. */
+    private String shortReason(Part part) {
+        int bits = menu.get(D_SHORT);
+        String fluid = part.cooling().fluid();
+        int[] mine = Cooling.WATER.equals(fluid) ? new int[]{SHORT_WATER} : Cooling.COOLANT.equals(fluid)
+                ? new int[]{SHORT_COOLANT, SHORT_HOT_ROOM} : new int[]{SHORT_PACK_FLUID, SHORT_PACK_ROOM};
+        for (int bit : mine) if ((bits & bit) != 0) return SHORT_KEYS[Integer.numberOfTrailingZeros(bit)];
+        return null;
     }
 
     /** Whether a part stands in a cell whose ghost (set by a scheme) is another part. */
@@ -314,6 +345,10 @@ public class ReactorScreen extends AbstractContainerScreen<ReactorMenu> {
             l.add(Component.translatable("gui.voltex_nuclear.reactor.heat_pipes", big(menu.getWide(D_HEAT))).withStyle(s -> s.withColor(C_HEAT)));
             l.add(Component.translatable("gui.voltex_nuclear.reactor.water", decimal(menu.get(D_WATER) * 20 / 100.0, 1)));
             l.add(Component.translatable("gui.voltex_nuclear.reactor.coolant", decimal(menu.get(D_COOLANT) * 20 / 100.0, 1)));
+            // why cells stand: the same lines as on a starved cell, here for all of them at once
+            int bits = menu.get(D_SHORT);
+            for (int b = 0; b < SHORT_KEYS.length; b++)
+                if ((bits & 1 << b) != 0) l.add(Component.translatable(SHORT_KEYS[b]).withStyle(s -> s.withColor(C_BAD)));
             l.add(Component.translatable("gui.voltex_nuclear.reactor.hull_tip"));
             g.renderComponentTooltip(font, l, mx, my);
         } else if (in(px, py, SIDE_X, KNOB_POWER, SIDE_W, 20)) {
